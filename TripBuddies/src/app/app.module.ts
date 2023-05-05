@@ -27,6 +27,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { HometestComponent } from './security/hometest/hometest.component';
 import { DestinationsTableComponent } from './destinations/destinations-table/destinations-table.component';
 import { DestinationsReviewsComponent } from './destinations/destinations-reviews/destinations-reviews.component';
+import { AddDestinationDialogComponent } from './destinations/add-destination-dialog/add-destination-dialog.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DestinationsReviewsComponent } from './destinations/destinations-review
     SignUpComponent,
     HometestComponent,
     DestinationsTableComponent,
-    DestinationsReviewsComponent
+    DestinationsReviewsComponent,
+    AddDestinationDialogComponent
   ],
   imports: [
     BrowserModule,

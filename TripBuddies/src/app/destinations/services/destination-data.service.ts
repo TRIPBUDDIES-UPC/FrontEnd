@@ -56,7 +56,7 @@ export class DestinationDataService {
 
   getReviews(id: string): Observable<Review> {
     return this.http
-      .get<Review>(this.baseUrl+ '/')
+      .get<Review>(this.baseUrl)
       .pipe(retry(2), catchError(this.handleError));
   }
 

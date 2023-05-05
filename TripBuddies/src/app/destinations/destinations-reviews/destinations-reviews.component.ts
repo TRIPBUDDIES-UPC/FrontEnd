@@ -17,6 +17,7 @@ export class DestinationsReviewsComponent implements OnInit {
   ,private activatedRouter: ActivatedRoute) {
     this.activatedRouter.params.subscribe(
       params => {
+        console.log(params['id']);
         this.getAllReviews(params['id']);
       }
     )

@@ -5,8 +5,10 @@ import { MatTableDataSource} from '@angular/material/table';
 import { Destination } from "../models/destination.model";
 import {NgForm} from "@angular/forms";
 import {DestinationDataService} from "../services/destination-data.service";
+import {AddDestinationDialogComponent} from "../add-destination-dialog/add-destination-dialog.component";
 import * as _ from "lodash";
 import {Router} from "@angular/router";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-destinations-table',
@@ -29,7 +31,8 @@ export class DestinationsTableComponent implements OnInit {
   paginator!: MatPaginator;
   isEditMode = false;
 
-  constructor(private destinationDataService: DestinationDataService, private router: Router) {
+  constructor(private destinationDataService: DestinationDataService, private router: Router,
+              private dialog:MatDialog) {
     this.destinationData = {} as Destination;
   }
 
@@ -86,21 +89,20 @@ export class DestinationsTableComponent implements OnInit {
 
   }
   viewReviews(id: any){
-    this.router.navigate(['destinations/', id]);
+    this.router.navigate(['destinations/', id, 'reviews']);
   }
-  onSubmit() {
-    if (this.destinationForm.form.valid) {
-      console.log('valid');
-      if (this.isEditMode) {
-        console.log('about to update');
-        this.updateDestination();
-      } else {
-        console.log('about to create');
-        this.createDestination();
+  openDialog(){
+    const dialogRef = this.dialog.open(AddDestinationDialogComponent, {
+      width: '500px',
+    });
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result){
+      this.dataSource.data.push({...result});
+      this.dataSource.data = this.dataSource.data.map((o: any) => { return o; });
+      console.log(`Dialog result: ${result}`);
+      this.getAllDestinations()
       }
-      this.cancelEdit();
-    } else {
-      console.log('Invalid data');
-    }
+    });
   }
 }

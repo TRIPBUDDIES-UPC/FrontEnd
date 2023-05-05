@@ -66,30 +66,42 @@
   ],
   "destinations": [
     {
-    "id": 1,
-    "name": "ParacasTour",
-    "image": "https://media.radissonhotelsamericas.com/image/destination-pagesus/localattraction/20828-139885-f65994677_3xl.jpg?impolicy=HomeHero",
-    "location": "Paracas",
-    "description": "Visita a la Reserva Nacional de Paracas blablablabla",
-    "price": 139.99,
-    "activities": "Visita a reserva, avistamiento de animales y parada en Huacachina",
-    "duration": "4 días 3 noches",
-    "country": "Peru",
-    "rating": 4.2,
-    "companyId": 1,
+      "id": 1,
+      "name": "ParacasTour",
+      "image": "https://media.radissonhotelsamericas.com/image/destination-pagesus/localattraction/20828-139885-f65994677_3xl.jpg?impolicy=HomeHero",
+      "location": "Paracas",
+      "description": "Visita a la Reserva Nacional de Paracas blablablabla",
+      "price": 139.99,
+      "activities": "Visita a reserva, avistamiento de animales y parada en Huacachina",
+      "duration": "4 días 3 noches",
+      "country": "Peru",
+      "rating": 4.2,
+      "companyId": 1,
       "reviews": [
         {
           "id": 1,
           "name": "Carlos Gonzales",
           "title": "Hermoso Paisaje",
           "date": "2023-04-15",
-          "rating": 5.0,
+          "rating": 5,
           "description": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
           "likes": 3,
           "dislikes": 1,
           "images": ""
         }
       ]
-  }
+    },
+    {
+      "name": "NazcaGo",
+      "image": "https://perutravelexpress.com/wp-content/uploads/2019/06/TOUR-NAZCA-ARQUEOL%C3%93GICO-DESDE-ICA-750x410.jpg",
+      "description": "Nazcaasdfasdf",
+      "location": "Nazca",
+      "price": 104.5,
+      "activities": "Pasear",
+      "duration": "5dias 4 noches",
+      "country": "Perú",
+      "rating": 4.8,
+      "id": 2
+    }
   ]
 }
