@@ -1,0 +1,34 @@
+<app-toolbar></app-toolbar>
+
+<div class="container">
+    <form #registerF="ngForm"  (ngSubmit)="onSubmit(registerF)">
+        <mat-form-field  appearance="outline" class="example-full-width"   >
+        <mat-label>Full Name</mat-label>
+        <input matInput placeholder="Name" required name="name" ngModel>
+         </mat-form-field>
+
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="text" matInput placeholder="Email" required name="email" ngModel>
+      </mat-form-field>
+
+  
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput  placeholder="password" required name="password" ngModel>
+      </mat-form-field>
+
+      <mat-radio-group  aria-label="Select a option">
+        <mat-radio-button id="viajero" value="viajero" required></mat-radio-button>
+        <label for="viajero">Traveler</label>
+  
+        <mat-radio-button id="empresa" value="empresa" required></mat-radio-button>
+        <label for="empresa">Bussiness</label>
+      </mat-radio-group>
+
+      <div class="button-container">
+        <button   type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+  

@@ -1,0 +1,18 @@
+<app-toolbar></app-toolbar>
+<div class="container">
+  <form    #loginF="ngForm"  (ngSubmit)="login(loginF)">
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput  required name="email" ngModel>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="example-full-width" >
+      <mat-label>Contraseña</mat-label>
+      <input matInput  type="password" required  name="password" ngModel>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit">Join</button>
+    </div>
+  </form>
+</div>
