@@ -21,16 +21,21 @@ import {MatCardModule} from "@angular/material/card";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatExpansionModule} from '@angular/material/expansion';
 import {ToastrModule} from 'ngx-toastr';
 import { MatRadioModule } from '@angular/material/radio';
 import { HometestComponent } from './security/hometest/hometest.component';
+import { DestinationsTableComponent } from './destinations/destinations-table/destinations-table.component';
+import { DestinationsReviewsComponent } from './destinations/destinations-reviews/destinations-reviews.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    HometestComponent
+    HometestComponent,
+    DestinationsTableComponent,
+    DestinationsReviewsComponent
   ],
   imports: [
     BrowserModule,
@@ -54,6 +59,7 @@ import { HometestComponent } from './security/hometest/hometest.component';
     FormsModule,
     MatSlideToggleModule,
     MatDialogModule,
+    MatExpansionModule,
     ToastrModule.forRoot(),
     MatRadioModule
   ],
