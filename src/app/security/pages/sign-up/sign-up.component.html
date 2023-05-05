@@ -1,0 +1,34 @@
+<div class="container">
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <mat-form-field  appearance="outline" class="example-full-width"   >
+      <mat-label>Full Name</mat-label>
+      <input matInput placeholder="Name" name="name" formControlName="name">
+      <mat-error *ngIf="registerForm.controls['name'].invalid && (registerForm.controls['name'].dirty || registerForm.controls['name'].touched)">
+        <span *ngIf="registerForm.controls['name'].errors?.['required']">Este campo es requerido.</span>
+      </mat-error>    </mat-form-field>
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="text" matInput  formControlName="email"  >
+      <mat-error *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)">
+        <span *ngIf="registerForm.controls['email'].errors?.['required']">Este campo es requerido.</span>
+      </mat-error>    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password" >
+      <mat-error *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)">
+        <span *ngIf="registerForm.controls['email'].errors?.['required']">Este campo es requerido.</span>
+      </mat-error>
+    </mat-form-field>
+    <mat-radio-group formControlName="type" aria-label="Select a option">
+      <mat-radio-button id="viajero" value="viajero" required></mat-radio-button>
+      <label for="viajero">Traveler</label>
+
+      <mat-radio-button id="empresa" value="empresa" required></mat-radio-button>
+      <label for="empresa">Bussiness</label>
+    </mat-radio-group>
+    <div class="button-container">
+      <button  [disabled]="registerForm.invalid" type="submit">Sign Up</button>
+    </div>
+  </form>
+</div>
