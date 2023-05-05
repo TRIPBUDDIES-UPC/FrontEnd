@@ -24,13 +24,17 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {ToastrModule} from 'ngx-toastr';
 import { MatRadioModule } from '@angular/material/radio';
 import { HometestComponent } from './security/hometest/hometest.component';
+import { HomeUsersComponent } from './home-users/home-users.component';
+import { SearchListComponent } from './search-list/search-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
     SignUpComponent,
-    HometestComponent
+    HometestComponent,
+    HomeUsersComponent,
+    SearchListComponent
   ],
   imports: [
     BrowserModule,

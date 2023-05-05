@@ -22,12 +22,13 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get("id"));
     this.getUsersById(Number(this.id));
-    this.getUserType(Number(this.id), this.Type)
+    //this.getUserType(Number(this.id), this.Type)
   }
 
   getUsersById(id:number){
     this.authService.getById(id).subscribe((response: any) =>{
       this.currentUser = response;
+      this.Type = response.type;
     })
   }
   getAll(){
@@ -35,10 +36,11 @@ export class AppComponent implements OnInit{
       this.currentUser = response;
     })
   }
+  /*
   getUserType(id:number, type :String){
     this.authService.getById(id).subscribe((response:any)=>{
       this.Type = response.type;
     })
-  }
+  }*/
 
 }

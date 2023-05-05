@@ -9,7 +9,7 @@ import {map} from "rxjs/operators";
 })
 export class TemplateService<T> {
 
-  basePath = ' http://localhost:3000';
+  basePath = ' https://tripbuddies-api.herokuapp.com';
 
   httpOptions = {
     headers: new HttpHeaders({

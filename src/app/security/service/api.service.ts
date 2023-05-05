@@ -10,6 +10,6 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   login(email: String, password: string) {
-    return this.http.post('http://localhost:3000/users', { email, password });
+    return this.http.post('https://tripbuddies-api.herokuapp.com/users', { email, password });
   }
 }
