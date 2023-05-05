@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {TemplateService} from "../../../Shared/template.service";
+import {TemplateService} from "../../../../Shared/template.service";
 import {SecuModel} from "../model/model";
 import {Observable, of, switchMap} from "rxjs";
 import { map } from 'rxjs/operators';

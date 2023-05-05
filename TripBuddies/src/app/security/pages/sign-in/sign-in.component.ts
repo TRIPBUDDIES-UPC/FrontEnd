@@ -4,7 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import { SecurityService } from '../../service/security.service';
 import {AuthService} from "../../service/auth.service";
 import {SecuModel} from "../../model/model";
-import {AppComponent} from "../../../app.component";
+import {AppComponent} from "../../../../app.component";
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',

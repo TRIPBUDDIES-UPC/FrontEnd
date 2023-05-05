@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {BehaviorSubject} from "rxjs";
-import {SecurityService} from "./security/service/security.service";
-import {SecuModel} from "./security/model/model";
+import {SecurityService} from "./app/security/service/security.service";
+import {SecuModel} from "./app/security/model/model";
 
 class CouponService {
 }

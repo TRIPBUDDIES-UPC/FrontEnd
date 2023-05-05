@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {SignUpComponent} from "./security/pages/sign-up/sign-up.component";
-import {SignInComponent} from "./security/pages/sign-in/sign-in.component";
+import {SignUpComponent} from "./app/security/pages/sign-up/sign-up.component";
+import {SignInComponent} from "./app/security/pages/sign-in/sign-in.component";
 import {HomeUsersComponent} from "./home-users/home-users.component";
-import {HometestComponent} from "./security/hometest/hometest.component";
+import {HometestComponent} from "./app/security/hometest/hometest.component";
 import {SearchListComponent} from "./search-list/search-list.component";
 
 const routes: Routes = [
