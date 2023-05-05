@@ -161,6 +161,45 @@
       "email": "asa1w2da2s1sd@sad.com",
       "password": "Test$1234",
       "id": 869
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 870
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 871
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 872
+    },
+    {
+      "name": "13213123",
+      "email": "asa11w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 873
+    },
+    {
+      "name": "123123123123",
+      "email": "asa1sw2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "type": "empresa",
+      "id": 874
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 875
+    },
+    {
+      "email": "asa1sw2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 876
     }
   ]
 }

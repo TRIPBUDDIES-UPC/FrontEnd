@@ -32,16 +32,6 @@ export class SignInComponent implements OnInit{
     if (this.loginForm.invalid) {
       return;
     }
-    /*this.authService.login(this.loginForm.get('email')?.value ?? '', this.loginForm.get('password')?.value).
-    subscribe((response) => {
-      const user = response.find()
-      if (response.token) {
-        alert('Login success!!!');
-        this.router.navigate(['/home', this.id]);
-      } else {
-        alert('Invalid credentials');
-      }
-    });*/
     this.AutID.getAll().subscribe((response:any)=> {
       const User = response.find((a:any) => {
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password;
@@ -50,7 +40,8 @@ export class SignInComponent implements OnInit{
         alert('Login success!!!');
         this.authService.login(this.loginForm.get('email')?.value
         ?? '', this.loginForm.get('password')?.value).subscribe((response:any)=> {
-          this.router.navigate(['home/'], this.id);
+          this.authService.currentID = User.id
+          this.router.navigate(['/home',this.authService.currentID]); //
         });
       } else{
         alert("user not found");

@@ -34,4 +34,10 @@ export class AuthService {
       })
     );
   }
+  currentUserID() {
+    return this.currentID;
+  }
+  currentUserName() {
+    return this.currentName;
+  }
 }

@@ -12,9 +12,4 @@ export class ApiService {
   login(email: String, password: string) {
     return this.http.post('http://localhost:3000/users', { email, password });
   }
-  /*
-  getProducts(): Observable<ProductsModel[]>{
-  return this.http.get<ProductModel[]>('products)
-  }
-  */
 }
