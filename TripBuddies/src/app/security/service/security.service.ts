@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 export class SecurityService extends TemplateService<SecuModel>{
   constructor(http: HttpClient) {
     super(http)
-    this.basePath ='http://localhost:3000/users/'
+    this.basePath =' http://localhost:3000/users'
   }
 
 }

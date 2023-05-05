@@ -9,8 +9,8 @@ import { Injectable } from "@angular/core";
 export class ApiService {
   constructor(private http: HttpClient) { }
 
-  login(dni: number, password: string) {
-    return this.http.post('login', { dni, password });
+  login(email: String, password: string) {
+    return this.http.post('http://localhost:3000/users', { email, password });
   }
   /*
   getProducts(): Observable<ProductsModel[]>{

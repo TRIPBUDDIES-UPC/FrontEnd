@@ -24,21 +24,14 @@ export class AuthService {
     this._isLoggedIn$.next(!!token);
   }
 
-  login(dni: number, password: string) {
+  login(email: String, password: string) {
     //this.currentDni = dni;
-    return this.apiService.login(dni, password).pipe(
+    return this.apiService.login(email, password).pipe(
       tap((response: any) => {
         this._isLoggedIn$.next(true);
         localStorage.setItem('TripBuddies_auth', response.token);
 
       })
     );
-  }
-
-  currentUserID() {
-    return this.currentID;
-  }
-  currentUserName() {
-    return this.currentName;
   }
 }

@@ -9,7 +9,7 @@ import {map} from "rxjs/operators";
 })
 export class TemplateService<T> {
 
-  basePath = 'http://localhost:3000/resources';
+  basePath = ' http://localhost:3000';
 
   httpOptions = {
     headers: new HttpHeaders({
