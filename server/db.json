@@ -1,0 +1,196 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "123456",
+      "type": "viajero"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "janedoe@example.com",
+      "password": "abcdef",
+      "type": "empresa"
+    },
+    {
+      "id": 3,
+      "name": "Bob Smith",
+      "email": "bobsmith@example.com",
+      "password": "qwerty",
+      "type": "viajero"
+    },
+    {
+      "id": 488,
+      "name": "23123123",
+      "email": "asdada@hotmail.om",
+      "password": "NightRyder123",
+      "type": "empresa"
+    },
+    {
+      "id": 849,
+      "name": "",
+      "email": "asd@sad.com",
+      "password": "Test$1234",
+      "type": ""
+    },
+    {
+      "id": 456,
+      "name": "",
+      "email": "asd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero"
+    },
+    {
+      "name": "21312313",
+      "email": "asa1dasd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 850
+    },
+    {
+      "name": "123123",
+      "email": "asa1dassd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 851
+    },
+    {
+      "name": "2133",
+      "email": "asa1das1sd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 852
+    },
+    {
+      "name": "sadasdnqwnjqw",
+      "email": "asa1wdas1sd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 853
+    },
+    {
+      "name": "2131231",
+      "email": "asa1w2das1sd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 854
+    },
+    {
+      "name": "123213",
+      "email": "12312313@hotmail.com",
+      "password": "12312313",
+      "type": "viajero",
+      "id": 855
+    },
+    {
+      "name": "1231231",
+      "email": "12312s313@hotmail.com",
+      "password": "12313213123",
+      "type": "viajero",
+      "id": 856
+    },
+    {
+      "name": "213123123",
+      "email": "2131231312@hotmail.com",
+      "password": "nasdnaskdqwe",
+      "type": "viajero",
+      "id": 857
+    },
+    {
+      "name": "3213123",
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 858
+    },
+    {
+      "name": "123123",
+      "email": "asa1w1232da2s1sd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 859
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 860
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 861
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 862
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 863
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 864
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 865
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 866
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 867
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 868
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 869
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 870
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 871
+    },
+    {
+      "email": "asa1w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "id": 872
+    },
+    {
+      "name": "13213123",
+      "email": "asa11w2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 873
+    },
+    {
+      "name": "123123123123",
+      "email": "asa1sw2da2s1sd@sad.com",
+      "password": "Test$1234",
+      "type": "empresa",
+      "id": 874
+    }
+
+  ]
+}
