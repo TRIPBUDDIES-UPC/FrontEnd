@@ -1,0 +1,19 @@
+<h1 class="header">My information</h1>
+
+<div class="mm">
+  <mat-card class="product-card">
+    <h1 class="title-row">Local Cinema</h1>
+    <div class="row clean-row">
+      <b>Cinema Name: </b> {{currentUser.name}}
+    </div>
+    <div class="row clean-row">
+      <b>Address: </b> {{currentUser.email}}
+    </div>
+    <div class="row clean-row">
+      <b>Type: </b> {{currentUser.type}}
+    </div>
+    <div mat-dialog-actions align="center">
+      <button mat-raised-button class="but" [routerLink]= "['/bussiness-profile-edit',currentUser.id]">Edit Profile</button>
+    </div>
+  </mat-card>
+</div>

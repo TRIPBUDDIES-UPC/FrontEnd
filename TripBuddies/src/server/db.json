@@ -1,0 +1,67 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "123456",
+      "type": "viajero"
+    },
+    {
+      "id": 2,
+      "name": "Jane Doe",
+      "email": "janedoe@example.com",
+      "password": "abcdef",
+      "type": "empresa"
+    },
+    {
+      "id": 3,
+      "name": "Bob Smith",
+      "email": "bobsmith@example.com",
+      "password": "qwerty",
+      "type": "viajero"
+    },
+    {
+      "id": 488,
+      "name": "23123123",
+      "email": "asdada@hotmail.om",
+      "password": "NightRyder123",
+      "type": "empresa"
+    },
+    {
+      "id": 849,
+      "name": "",
+      "email": "asd@sad.com",
+      "password": "Test$1234",
+      "type": ""
+    },
+    {
+      "id": 456,
+      "name": "",
+      "email": "asd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero"
+    },
+    {
+      "name": "21312313",
+      "email": "asa1dasd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 850
+    },
+    {
+      "name": "123123",
+      "email": "asa1dassd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 851
+    },
+    {
+      "name": "2133",
+      "email": "asa1das1sd@sad.com",
+      "password": "Test$1234",
+      "type": "viajero",
+      "id": 852
+    }
+  ]
+}
