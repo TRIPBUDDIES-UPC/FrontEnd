@@ -26,6 +26,10 @@ import { MatRadioModule } from '@angular/material/radio';
 import { HometestComponent } from './app/security/hometest/hometest.component';
 import { HomeUsersComponent } from './app/home-users/home-users.component';
 import { SearchListComponent } from './app/search-list/search-list.component';
+import { DestinationsReviewsComponent } from './app/destinations/destination-reviews/destination-reviews.component';
+import { DestinationsTableComponent } from './app/destinations/destination-table/destination-table.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import {AddDestinationDialogComponent} from "./app/destinations/add-destination-dialog/add-destination-dialog.component";
 
 @NgModule({
   declarations: [
@@ -34,7 +38,10 @@ import { SearchListComponent } from './app/search-list/search-list.component';
     SignUpComponent,
     HometestComponent,
     HomeUsersComponent,
-    SearchListComponent
+    SearchListComponent,
+    DestinationsReviewsComponent,
+    DestinationsTableComponent,
+    AddDestinationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +66,8 @@ import { SearchListComponent } from './app/search-list/search-list.component';
     MatSlideToggleModule,
     MatDialogModule,
     ToastrModule.forRoot(),
-    MatRadioModule
+    MatRadioModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
