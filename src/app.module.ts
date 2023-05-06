@@ -30,6 +30,7 @@ import { DestinationsReviewsComponent } from './app/destinations/destination-rev
 import { DestinationsTableComponent } from './app/destinations/destination-table/destination-table.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import {AddDestinationDialogComponent} from "./app/destinations/add-destination-dialog/add-destination-dialog.component";
+import { TravelListComponent } from './app/travel-list/travel-list.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import {AddDestinationDialogComponent} from "./app/destinations/add-destination-
     SearchListComponent,
     DestinationsReviewsComponent,
     DestinationsTableComponent,
-    AddDestinationDialogComponent
+    AddDestinationDialogComponent,
+    TravelListComponent
   ],
   imports: [
     BrowserModule,
