@@ -23,9 +23,14 @@ export class SignUpComponent implements OnInit{
   userForm!: NgForm;
   registerForm: FormGroup= this.formBuilder.group({
     name: ['', Validators.required],
+    lastname:['',Validators.required],
+    phone:['',Validators.required,Validators.maxLength(9)],
+    Age:['',[Validators.required, Validators.pattern('^[0-9]+$')]],
+    Description:['',Validators.required],
     email: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required, Validators.minLength(6)]],
     type: ['',[Validators.required]]
+
   });
   constructor(private  formBuilder: FormBuilder, private  authService: SecurityService, private router: Router,
               ) {
@@ -53,7 +58,10 @@ export class SignUpComponent implements OnInit{
       name: this.registerForm.value.name,
       email: this.registerForm.value.email,
       password: this.registerForm.value.password,
-      type: this.registerForm.value.type
+      type: this.registerForm.value.type,
+      lastname:this.registerForm.value.lastname,
+      phone:this.registerForm.value.phone,
+      Age:this.registerForm.value.Age,
     }
 
     this.authService.getAll().subscribe((response:any) => {

@@ -20,7 +20,7 @@
           <mat-form-field class="custom-form-field" >
             <div class="icono-y-texto">
               <mat-icon>account_circle</mat-icon>
-              <mat-label>{{UserData.name}}</mat-label>
+              <mat-label>{{UserData.email}}</mat-label>
             </div>
             <mat-select (selectionChange)="opcionSeleccionada($event)">
               <mat-option *ngFor="let option of options" [value]="option.value">

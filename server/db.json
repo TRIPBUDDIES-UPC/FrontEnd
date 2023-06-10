@@ -276,6 +276,61 @@
       "email": "miguel@gmail.com",
       "password": "123456",
       "id": 890
+    },
+    {
+      "name": "Cristian",
+      "email": "cristianbonifacio@gmail.com",
+      "password": "123456",
+      "type": "viajero",
+      "lastname": "Aldair",
+      "phone": "1234567",
+      "Age": "18",
+      "id": 891
+    },
+    {
+      "email": "cristianbonifacio@gmail.com",
+      "password": "123456",
+      "id": 892
+    },
+    {
+      "name": "Jair",
+      "email": "jair@gmail.com",
+      "password": "123456",
+      "type": "viajero",
+      "lastname": "CHINCHA",
+      "phone": "123456",
+      "Age": "12",
+      "id": 893
+    },
+    {
+      "email": "jair@gmail.com",
+      "password": "123456",
+      "id": 894
+    },
+    {
+      "email": "jair@gmail.com",
+      "password": "123456",
+      "id": 895
+    },
+    {
+      "email": "jair@gmail.com",
+      "password": "123456",
+      "id": 896
+    },
+    {
+      "email": "jair@gmail.com",
+      "password": "123456",
+      "id": 897
+    },
+    {
+      "email": "jair@gmail.com",
+      "password": "123456",
+      "id": 898
+    },
+    {
+      "email": "cristianbonifacio@gmail.com",
+      "password": "123456",
+      "id": 899
     }
   ]
 }

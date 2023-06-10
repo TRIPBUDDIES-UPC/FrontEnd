@@ -9,7 +9,7 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./profile-users.component.css']
 })
 export class ProfileUsersComponent {
-  title: String | any;
+
   id: any;
   UserData: SecuModel;
 
@@ -24,7 +24,6 @@ export class ProfileUsersComponent {
   getUserByID(id: number){
     this.userService.getById(id).subscribe((response:any)=>{
       this.UserData = response;
-      this.title = response.name;
     })
   }
   getAll(){

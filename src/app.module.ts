@@ -38,6 +38,7 @@ import {HeaderComponent} from "./app/public/pages/header/header.component";
 import {MatSelectModule} from '@angular/material/select';
 import { ProfileUsersComponent } from './app/users/profile-users/profile-users.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
+import { FotterComponent } from './app/public/pages/fotter/fotter.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import {MatSidenavModule} from "@angular/material/sidenav";
     AcercaDeComponent,
     HeaderUsersComponent,
     HeaderComponent,
-    ProfileUsersComponent
+    ProfileUsersComponent,
+    FotterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,34 +1,22 @@
-<mat-sidenav-container>
-  <mat-sidenav-content>
-    <div class="inner-content mat-elevation-z8">
-      <mat-grid-list cols="4" rowHeight="88vh">
-        <mat-grid-tile #first colspan="1" rowspan="1">
-          <mat-card class="developer-personal-info">
-            <div class="img-container">
-              <img
-                [src]="UserData.name"
-                alt="" class="card-img" />
-            </div>
+<app-header-users></app-header-users>
+<mat-card>
 
-            <div class="img-container">
-              <div class="card-container">
-                <h1 class="card-title-text">{{UserData.name}} </h1>
+    <mat-card-header style="margin-bottom: 50px;">
+      <mat-card-title class="custom-title">PROFILE</mat-card-title>
+    </mat-card-header>
 
-                <ul>
-                  <li>
-                    <mat-icon>email</mat-icon>
-                    <div class="inner-li">
-                      <span>Email</span>
-                      <br />
-                      <span>{{UserData.email}}</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  <img class="avatar" src="https://www.softzone.es/app/uploads/2018/04/guest.png" alt="Foto de perfil">
+
+
+
+
+
+  <mat-card-content>
+    <p><strong>Nombre:</strong> John Doe</p>
+    <p><strong>Edad:</strong> 30 años</p>
+    <p><strong>Teléfono:</strong> 1234567890</p>
+    <p><strong>Email:</strong> johndoe@example.com</p>
+    <p><strong>Tipo:</strong> Usuario</p>
+  </mat-card-content>
+</mat-card>
+<app-fotter></app-fotter>
