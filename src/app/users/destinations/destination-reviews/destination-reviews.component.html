@@ -1,0 +1,16 @@
+<button mat-raised-button color="accent" (click)="navigateBack()">Back</button>
+
+<ng-container *ngFor="let review of reviewsData">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ review.name }} - {{ review.date }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{review.title}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    {{ review.description }}
+    <br> Rating: {{ review.rating}} ★
+  </mat-expansion-panel>
+</ng-container>

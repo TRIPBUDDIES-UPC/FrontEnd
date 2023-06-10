@@ -1,0 +1,268 @@
+.inner-content {
+  height: auto;
+  margin: 16px 16px 0px 32px;
+  background-color: #efefef;
+  border-radius: 10px;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+mat-icon {
+  margin-right: 8px;
+}
+
+.img-container {
+  display: flex;
+}
+
+.card-img {
+  margin: auto;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+}
+
+.card-title-text {
+  margin-top: 10px;
+  text-align: center;
+  text-decoration: bold;
+}
+
+.card-paragraph-text {
+  margin-top: 5px;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.developer-career-info {
+  display: flex;
+  width: 980%;
+  flex-direction: column;
+  margin: 1rem;
+  overflow: auto;
+  height: 95%;
+}
+
+.developer-personal-info {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 95%;
+}
+
+.img-in {
+  display: flex;
+  width: 95%;
+  height: 44vh;
+  margin: auto;
+  border-radius: 1%;
+}
+
+.img-container-2 {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  list-style: disc;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.3rem;
+}
+
+.developer-list li {
+  margin-left: 2rem;
+  display: list-item;
+  color: #4054b4;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+ul span {
+  color: black;
+}
+
+.developer-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.education-card {
+  width: 30%;
+  box-sizing: border-box;
+  margin: 0.3rem;
+}
+
+mat-card-subtitle span {
+  color: #4054b4;
+}
+
+mat-card-title p {
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+}
+
+mat-card-title .inner-paragraph {
+  font-size: 1.1rem;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: 550;
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 30%;
+  box-sizing: border-box;
+  margin: 0.3rem;
+}
+
+.skills-img {
+  width: 60px;
+  height: 60px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 45%;
+  box-sizing: border-box;
+  margin: 0.3rem;
+}
+
+.certificate-card {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  width: 65%;
+  box-sizing: border-box;
+  margin: 0.3rem;
+}
+
+mat-card-title .marvel-c {
+  display: flex;
+  justify-content: start;
+}
+
+.certificate-header-image {
+  background-image: url("https://img.icons8.com/color/480/c-programming.png");
+  background-size: cover;
+}
+
+mat-card-content .certificate-date {
+  display: flex;
+  justify-content: end;
+  margin-left: 8rem;
+}
+
+.card-color {
+  background-color: #f7f8fd;
+  color: black;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+}
+
+@media screen and (max-width: 1215px) {
+  .education-card {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.3rem;
+  }
+
+  .skills-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.3rem;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.3rem;
+  }
+
+  .certificate-card {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0.3rem;
+  }
+
+  mat-card-content .certificate-date {
+    display: flex;
+    justify-content: end;
+    margin-left: 0.1rem;
+  }
+
+  .developer-career-info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 0;
+    overflow: auto;
+    height: 98%;
+  }
+
+  .interno {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .this-main-container {
+    margin-top: 15rem;
+    min-height: 2360px;
+    overflow: hidden;
+  }
+
+  .img-in {
+    display: flex;
+    width: 100%;
+    height: 34vw;
+    margin: auto;
+    border-radius: 1%;
+  }
+
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.8rem;
+  }
+}

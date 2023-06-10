@@ -1,0 +1,43 @@
+<div class="content">
+
+  <mat-toolbar color="primary" class="toolbar">
+    <div class="left-container">
+      <button class="company-name button-toolbar" [routerLink]="['/home', UserData.id]">Tourmates</button>
+    </div>
+
+    <div class="right-container">
+      <div>
+        <button class="options-toolbar button-toolbar" [routerLink]="['/home', UserData.id]">Home</button>
+      </div>
+      <div >
+        <button class="options-toolbar button-toolbar" [routerLink]="['/acerca-de', UserData.id]">Acerca de</button>
+      </div>
+      <div >
+        <button class="options-toolbar button-toolbar"  >Nosotros</button>
+      </div>
+
+      <div>
+          <mat-form-field class="custom-form-field" >
+            <div class="icono-y-texto">
+              <mat-icon>account_circle</mat-icon>
+              <mat-label>{{UserData.name}}</mat-label>
+            </div>
+            <mat-select (selectionChange)="opcionSeleccionada($event)">
+              <mat-option *ngFor="let option of options" [value]="option.value">
+                {{option.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+      </div>
+
+
+
+
+    </div>
+
+  </mat-toolbar>
+</div>
+
+
+
+

@@ -1,0 +1,80 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(242, 212, 121, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para las etiquetas de los inputs */
+mat-label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Estilo para los campos de entrada de texto */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.button-container{
+  mso-space-below: yes;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Estilo para el botón de enviar */
+button[type="submit"] {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type="button"] {
+  margin-left: 25px;
+  color: black;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Estilo para los mensajes de error */
+mat-error {
+  font-size: 12px;
+  color: #f44336;
+  margin-top: 5px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* esto hace que el contenedor ocupe toda la altura de la ventana */
+  background-image: url('https://th.bing.com/th/id/R.e8aa0d6d79b90cc8749ad89d260c196c?rik=VHv7gmN5vSK4aQ&pid=ImgRaw&r=0');
+  background-repeat: no-repeat;
+  background-size: cover; /* para ajustar la imagen al tamaño del contenedor */
+}
+.toast-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}

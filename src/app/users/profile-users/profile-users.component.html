@@ -1,0 +1,34 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <div class="inner-content mat-elevation-z8">
+      <mat-grid-list cols="4" rowHeight="88vh">
+        <mat-grid-tile #first colspan="1" rowspan="1">
+          <mat-card class="developer-personal-info">
+            <div class="img-container">
+              <img
+                [src]="UserData.name"
+                alt="" class="card-img" />
+            </div>
+
+            <div class="img-container">
+              <div class="card-container">
+                <h1 class="card-title-text">{{UserData.name}} </h1>
+
+                <ul>
+                  <li>
+                    <mat-icon>email</mat-icon>
+                    <div class="inner-li">
+                      <span>Email</span>
+                      <br />
+                      <span>{{UserData.email}}</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

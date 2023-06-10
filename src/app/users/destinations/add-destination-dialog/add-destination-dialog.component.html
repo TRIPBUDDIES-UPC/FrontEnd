@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Create Destination</h1>
+<div mat-dialog-content>
+  <form #destinationForm="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Nombre" [(ngModel)]="destinationData.name" name="name" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Image URL" [(ngModel)]="destinationData.image" name="image" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Location" [(ngModel)]="destinationData.location" name="location" required>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Description" [(ngModel)]="destinationData.description" name="description" required></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Price" [(ngModel)]="destinationData.price" name="price" type="number" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Activities" [(ngModel)]="destinationData.activities" name="activities" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Duration" [(ngModel)]="destinationData.duration" name="duration" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Country" [(ngModel)]="destinationData.country" name="country" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Rating" [(ngModel)]="destinationData.rating" name="rating" type="number" required>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+  <button mat-button color="primary" [disabled]="!destinationForm.valid" (click)="onSubmit()">Save</button>
+</div>
