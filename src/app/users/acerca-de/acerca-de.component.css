@@ -1,0 +1,72 @@
+.container{
+  height: 89.5vh;
+  background-image: url("../../assets/viajeros.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 70px;
+  line-height: 1.2; /* Ajusta este valor según el espaciado deseado */
+  font-family: Arial, sans-serif;
+}
+
+.outer-card {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.inner-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1;
+  margin: 0 10px;
+}
+
+.sub-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color:indianred;
+}
+
+.info {
+  font-size: 18px;
+  color: #666;
+
+}
+
+.image1 {
+  background-image: url('../../assets/acercade_1.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 100px;
+margin-left: 120px}
+.image2 {
+  background-image: url('../../assets/acercade_2.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 100px;
+  margin-left: 120px}
+.image3 {
+  background-image: url('../../assets/acercade_3.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 100px;
+  margin-left: 120px}
+

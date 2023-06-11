@@ -1,12 +1,28 @@
 
+.image-back{
+  background-image:url("src/app/assets/viajero_convista.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex; /* Aplica flexbox */
+  flex-direction: row; /* Establece la dirección horizontal */
+}
+
 mat-card{
-  background-color:cadetblue;
+  background-color: rgba(0, 0, 0, 0.6); /* Color de fondo casi visible */
   width: 50vh;
   height: 89.5vh; /* Establecer la altura de la tarjeta al 100% de la altura de la ventana */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 500px; /* Margen entre los mat-card */
 }
+
+.Edit{
+  margin-left: 50px;  background-color: white;height:70vh;align-self: center
+}
+
+
 .custom-card {
   background-color: #f1f1f1;
   border-radius: 5px;
@@ -24,15 +40,41 @@ mat-card{
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
-  margin-bottom: 180px;
+  margin-bottom: 30px;
 
 }
 
+.Buttonedit{
+ Color:royalblue;
+}
 
 
+p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+strong{
+  margin-right: 20px;
+}
+
+p a {
+  Color:white;
+}
+
+mat-card-content{
+  align-self: flex-start;
+  padding: 5px;
+  margin:10px;
+}
+
+.Table{
+  margin-bottom: 100px;
+}
 .custom-title {
   font-size: 36px; /* Tamaño de fuente */
-  color: black; /* Color de texto */
+  color: white; /* Color de texto */
   font-weight: bold; /* Grosor de la fuente */
   text-align: center; /* Alineación del texto */
   text-transform: uppercase; /* Transformación de texto a mayúsculas */

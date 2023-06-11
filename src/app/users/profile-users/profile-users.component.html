@@ -1,22 +1,58 @@
 <app-header-users></app-header-users>
-<mat-card>
-
+<div class="image-back">
+  <mat-card>
     <mat-card-header style="margin-bottom: 50px;">
       <mat-card-title class="custom-title">PROFILE</mat-card-title>
     </mat-card-header>
-
   <img class="avatar" src="https://www.softzone.es/app/uploads/2018/04/guest.png" alt="Foto de perfil">
-
-
-
-
-
+  <div class="Table">
   <mat-card-content>
-    <p><strong>Nombre:</strong> John Doe</p>
-    <p><strong>Edad:</strong> 30 años</p>
-    <p><strong>Teléfono:</strong> 1234567890</p>
-    <p><strong>Email:</strong> johndoe@example.com</p>
-    <p><strong>Tipo:</strong> Usuario</p>
+    <div >
+      <p><strong>FirstName:</strong><a>{{UserData.name}}</a></p>
+    </div>
+  </mat-card-content>
+  <mat-card-content>
+    <div>
+      <p><strong>LastName:</strong><a>{{UserData.lastname}}</a></p>
+    </div>
+  </mat-card-content>
+  <mat-card-content>
+    <div><p><strong>Age:</strong><a>{{UserData.Age}}</a></p></div>
+  </mat-card-content>
+  <mat-card-content>
+    <div><p><strong>Phone:</strong> <a>{{UserData.phone}}</a></p></div>
+  </mat-card-content>
+  <mat-card-content>
+    <div><p><strong>Email:</strong><a>{{UserData.email}}</a></p></div>
+  </mat-card-content>
+  <mat-card-content>
+    <div><p><strong>Tipo:</strong><a>{{UserData.type}}</a></p></div>
+  </mat-card-content>
+    <mat-card-content style="align-self: flex-end;">
+      <button mat-flat-button [disabled]="buttonDisabled"  style=" background:royalblue;" (click)="toggleElement()">Edit Profile</button>
+    </mat-card-content>
+  </div>
+
+</mat-card>
+<mat-card class="Edit" *ngIf="showElement">
+  <mat-card-header>
+    <p>Edit Profile</p>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <p>Age: </p>
+      <mat-form-field>
+        <input matInput formControlName="Age" placeholder="Age" [ngModel]="UserData.Age" >
+      </mat-form-field>
+      <p>Phone: </p>
+      <mat-form-field>
+        <input matInput formControlName="phone" placeholder="phone" [ngModel]="UserData.phone" >
+      </mat-form-field>
+      <!-- Otros campos del formulario -->
+
+      <button mat-raised-button color="primary" type="submit">Enviar</button>
+    </form>
   </mat-card-content>
 </mat-card>
+</div>
 <app-fotter></app-fotter>

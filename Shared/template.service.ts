@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
-import {catchError, Observable, retry, throwError} from "rxjs";
+import {catchError, Observable, throwError} from "rxjs";
 import {SecuModel} from "../src/app/public/model/model";
 import {map} from "rxjs/operators";
+import { retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -74,6 +75,6 @@ export class TemplateService<T> {
   update(id: any, item: any): Observable<T> {
     return this.http.put<T>(`${this.basePath}/${id}`,
       JSON.stringify(item), this.httpOptions)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(retry(3), catchError(this.handleError));
   }
 }

@@ -60,7 +60,9 @@ export class HeaderUsersComponent implements  OnInit{
     });
   }
 
-
+  redirectToPage() {
+    window.open("https://tripbuddies-upc.github.io/Landing-Page/", "_blank");
+  }
 
 }
 interface Select {
