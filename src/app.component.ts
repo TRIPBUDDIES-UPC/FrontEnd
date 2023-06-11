@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {BehaviorSubject} from "rxjs";
 import {SecurityService} from "./app/public/service/security.service";
 import {SecuModel} from "./app/public/model/model";
+import {TemplateService} from "../Shared/template.service";
 
 class CouponService {
 }
@@ -16,7 +17,7 @@ export class AppComponent implements OnInit{
  id:any;
   currentUser : SecuModel;
   Type :String = '';
-  constructor(public authService: SecurityService, private route: ActivatedRoute) {
+  constructor(public authService: TemplateService, private route: ActivatedRoute) {
     this.currentUser = {} as SecuModel
   }
   ngOnInit(): void {

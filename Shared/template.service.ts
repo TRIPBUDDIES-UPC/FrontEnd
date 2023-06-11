@@ -3,14 +3,17 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
 import {SecuModel} from "../src/app/public/model/model";
 import {map} from "rxjs/operators";
+import {BussinessModel} from "../src/app/public/model/BussinessModel";
+import {TravellerModel} from "../src/app/public/model/TravellerModel";
 
 @Injectable({
   providedIn: 'root'
 })
-export class TemplateService<T> {
+export class TemplateService {
 
-  basePath = ' https://tripbuddies-api.herokuapp.com';
-
+  basePath = 'https://tripbuddieswebservice-production.up.railway.app/users';
+  urlBussiness = "https://tripbuddieswebservice-production.up.railway.app/businesses"
+  urlTraveller = "https://tripbuddieswebservice-production.up.railway.app/travellers"
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
@@ -34,8 +37,8 @@ export class TemplateService<T> {
         map(users => users.length > 0 ? users[0] : undefined)
       );
   }
-  create(item: any): Observable<T> {
-    return this.http.post<T>(
+  create(item: any): Observable<any> {
+    return this.http.post(
       this.basePath,
       JSON.stringify(item),
       this.httpOptions)
@@ -44,8 +47,8 @@ export class TemplateService<T> {
         catchError(this.handleError));
   }
 
-  getById(id: any): Observable<T> {
-    return this.http.get<T>(
+  getById(id: any): Observable<object> {
+    return this.http.get(
       `${this.basePath}/${id}`,
       this.httpOptions)
       .pipe(
@@ -61,8 +64,13 @@ export class TemplateService<T> {
       );
   }
 
-  getAll(): Observable<T> {
-    return this.http.get<T>(this.basePath, this.httpOptions)
+  getAll(): Observable<object> {
+    return this.http.get(this.basePath, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  getAllUser(): Observable<object> {
+    return this.http
+      .get<object>(this.basePath, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
@@ -71,9 +79,43 @@ export class TemplateService<T> {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  update(id: any, item: any): Observable<T> {
-    return this.http.put<T>(`${this.basePath}/${id}`,
+  update(id: any, item: any): Observable<any> {
+    return this.http.put(`${this.basePath}/${id}`,
       JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  getAllTravellerProfile(id: number): Observable<object> {
+    return this.http.get(`${this.basePath}/traveller`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  postBussiness(company: BussinessModel): Observable<BussinessModel> {
+    return this.http
+      .post<BussinessModel>(`${this.urlBussiness}`, company, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  getBussinessAll(): Observable<BussinessModel> {
+    return this.http
+      .get<BussinessModel>(`${this.urlBussiness}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  postTraveller(traveller: TravellerModel): Observable<TravellerModel> {
+    return this.http
+      .post<TravellerModel>(`${this.urlTraveller}`, traveller, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  getTravellerAll(): Observable<any> {
+    return this.http
+      .get<TravellerModel>(`${this.urlTraveller}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  getUserByEmail(email: string): Observable<object> {
+    return this.http
+      .get<object>(`${this.basePath}/searchByEmail/${email}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+  getUserById(id: number): Observable<object> {
+    return this.http
+      .get<object>(`${this.basePath}/${id}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

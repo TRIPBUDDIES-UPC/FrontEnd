@@ -1,12 +1,10 @@
 export interface SecuModel{
-  id?: number;
-  name: String;
-  lastname:String;
-  phone:String,
-
-  Age:String;
-  email: String;
-  password: String;
-  type: String;
-
+  id: number,
+  firstName:string,
+  lastName:string,
+  description:string,
+  email:string,
+  password:string,
+  phone:string,
+  role : string,
 }

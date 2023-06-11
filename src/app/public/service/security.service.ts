@@ -8,10 +8,7 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class SecurityService extends TemplateService<SecuModel>{
-  constructor(http: HttpClient) {
-    super(http)
-    this.basePath ='http://localhost:3000/users';
-  }
+export class SecurityService{
+
 
 }

@@ -1,12 +1,10 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {SecuModel} from "../../model/model";
-import {SecurityService} from "../../service/security.service";
-import {ActivatedRoute, Router} from "@angular/router";
-import {FormGroup, FormBuilder, Validators, Form, AbstractControl, ValidationErrors, NgForm} from "@angular/forms";
-import {Observable} from "rxjs";
-import {ToastrService} from "ngx-toastr";
-import {map} from "rxjs/operators";
-import * as _ from "lodash";
+import {TravellerProfile} from "../../model/TravellerProfile";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+import {DialogBoxInvalidFormComponent} from "../sign-in/dialog-box-invalid-form/dialog-box-invalid-form.component";
+import {MatDialog} from "@angular/material/dialog";
+import {TemplateService} from "../../../../../Shared/template.service";
 
 @Component({
   selector: 'app-sign-up',
@@ -14,66 +12,130 @@ import * as _ from "lodash";
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit{
-  submitted = false;
-  users: SecuModel;
-  secuTypeOptions = ['viajero', 'empresa'];
-  isEditMode: boolean = false;
+  userTraveller: Array<any>= [];
+  userBussiness: Array<any>= [];
 
-  @ViewChild('userForm', { static: false })
-  userForm!: NgForm;
-  registerForm: FormGroup= this.formBuilder.group({
-    name: ['', Validators.required],
-    lastname:['',Validators.required],
-    phone:['',Validators.required,Validators.maxLength(9)],
-    Age:['',[Validators.required, Validators.pattern('^[0-9]+$')]],
-    Description:['',Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(6)]],
-    type: ['',[Validators.required]]
-
+  digitalProfile!: TravellerProfile;
+  loggedIn = false;
+  registered = false;
+  logger: string = 'traveller';
+  loginForm: FormGroup = this.formBuilder.group({
+    email : ["", {validators: [Validators.required, Validators.email], updateOn: 'change'}],
+    password : ["", {validators: [Validators.required, Validators.minLength(8)], updateOn: 'change'}],
   });
-  constructor(private  formBuilder: FormBuilder, private  authService: SecurityService, private router: Router,
-              ) {
-    this.users = { } as SecuModel
+  constructor(private formBuilder:FormBuilder, public dialog: MatDialog, private router: Router, private service: TemplateService){
+    this.digitalProfile = {} as TravellerProfile;
   }
-  get f() { return this.registerForm.controls; }
-
   ngOnInit(): void {
-
-  }
-  addUser(){
-    this.authService.create(this.userForm.value).subscribe(response =>{
-      this.userForm.reset()
-      this.router.navigate(['sign-in'])
-    })
-  }
-  onSubmit() {
-    this.submitted = true;
-
-    // stop here if form is invalid
-    if (this.registerForm.invalid) {
-      return;
-    }
-    const user = {
-      name: this.registerForm.value.name,
-      email: this.registerForm.value.email,
-      password: this.registerForm.value.password,
-      type: this.registerForm.value.type,
-      lastname:this.registerForm.value.lastname,
-      phone:this.registerForm.value.phone,
-      Age:this.registerForm.value.Age,
-    }
-
-    this.authService.getAll().subscribe((response:any) => {
-      const existingUser = response.find((u:any) => u.email === user.email);
-      if(existingUser) {
-        alert("User with this email already exists!");
-        return;
-      }
-      this.authService.create(user).subscribe((response:any) => {
-        alert("Registration successful!");
-        this.router.navigate(['/sign-in']);
-      });
+    this.setEmailValidation();
+    this.setPaswordValidation();
+    this.service.getTravellerAll().subscribe((data: any) => {
+      this.userTraveller = data;
     });
+    this.service.getBussinessAll().subscribe((data: any) => {
+      this.userBussiness = data;
+    });
+  }
+  get email() {
+    return this.loginForm.get('email');
+  }
+  get password() {
+    return this.loginForm.get('password');
+  }
+
+  setEmailValidation() {
+    const emailControl = this.loginForm.get('email');
+    //Default validation
+    emailControl?.setValidators([Validators.required, Validators.email, Validators.pattern('[a-z0-9]+@[a-z]+\.[a-z]{2,3}')]);
+    this.loginForm.get('email')?.valueChanges.subscribe(value => {
+      if (value === 'admin@tripBuddies.com') {
+        this.loginForm.get('email')?.setValidators([Validators.required]);
+      } else {
+        this.loginForm.get('email')?.setValidators([Validators.required, Validators.email, Validators.pattern('[a-z0-9]+@[a-z]+\.[a-z]{2,3}')]);
+      }
+      this.loginForm.get('email')?.updateValueAndValidity();
+    });
+  }
+  submitForm() {
+    console.log(this.loginForm.valid);
+    this.loggedIn = true;
+  }
+  back(): void {
+    window.location.href = 'https://tripbuddies-upc.github.io/Landing-Page/';
+  }
+  setPaswordValidation() {
+    this.loginForm.get('password')?.valueChanges.subscribe(value => {
+      if (value.length < 8 || value.length > 16) {
+        this.loginForm.get('password')?.setValidators([Validators.required, Validators.minLength(8), Validators.maxLength(16)]);
+      } else {
+        this.loginForm.get('password')?.setValidators([Validators.required, Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,16}$')]);
+      }
+      this.loginForm.get('password')?.updateValueAndValidity();
+    });
+  }
+
+  openDialog(): void {
+    this.registered = false;
+    if (this.loginForm.invalid) {
+      if(this.loginForm.get('email')?.value === '' && this.loginForm.get('password')?.value === '') {
+        this.dialog.open(DialogBoxInvalidFormComponent, {
+          data: { message: 'Please fill all the required fields'},
+        });
+      }
+      else if(this.loginForm.get('email')?.value === '' && this.loginForm.get('password')?.value !== '') {
+        this.dialog.open(DialogBoxInvalidFormComponent, {
+          data: { message: 'Please fill the email field'},
+        });
+      }
+      else {
+        this.dialog.open(DialogBoxInvalidFormComponent, {
+          data: { message: 'Please fill the password field'},
+        });
+      }
+    }
+    else {
+      this.verifyAccount();
+    }
+  }
+  goUserTraveller(id : any) {
+    localStorage.setItem("id", id);
+    this.router.navigate(['/travellers/home']);
+  }
+
+  goUserBussiness(id : any) {
+    localStorage.setItem("id", id);
+    this.router.navigate(['/bussinesses/home']);
+  }
+
+  verifyAccount() {
+    let email = this.loginForm.get('email')?.value;
+    let password = this.loginForm.get('password')?.value;
+
+    if (email!== null && password!== null) {
+      if (this.logger === 'traveller') {
+        for (let i = 0; i < this.userTraveller.length; i++) {
+          if (this.userTraveller[i].email === email && this.userTraveller[i].password === password) {
+            this.goUserTraveller(this.userTraveller[i].id);
+            this.registered = true;
+            break;
+          }
+        }
+      }
+      else{
+        for (let i = 0; i < this.userBussiness.length; i++) {
+          if (this.userBussiness[i].email === email && this.userBussiness[i].password === password) {
+            this.goUserBussiness(this.userBussiness[i].id);
+            this.registered = true;
+            break;
+          }
+        }
+
+      }
+    }
+    if(!this.registered) {
+      this.dialog.open(DialogBoxInvalidFormComponent, {
+        data: { message: 'Email or password incorrect'},
+      });
+    }
   }
 }

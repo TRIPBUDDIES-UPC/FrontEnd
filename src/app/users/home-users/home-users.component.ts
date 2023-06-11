@@ -19,17 +19,6 @@ export class HomeUsersComponent implements OnInit{
   }
   ngOnInit(): void {
     this.id = Number(this.route.snapshot.paramMap.get("id"));
-    this.getUserByID(Number(this.id))
   }
-  getUserByID(id: number){
-    this.userService.getById(id).subscribe((response:any)=>{
-      this.UserData = response;
-      this.title = response.name;
-    })
-  }
-  getAll(){
-    this.userService.getAll().subscribe((response:any)=>{
-      this.UserData = response;
-    });
-  }
+
 }

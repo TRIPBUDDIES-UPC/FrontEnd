@@ -10,12 +10,56 @@ import {TravelListComponent} from "./app/users/travel-list/travel-list.component
 import {PageNotfoundComponent} from "./app/public/pages/page-notfound/page-notfound.component";
 import {AcercaDeComponent} from "./app/users/acerca-de/acerca-de.component";
 import {ProfileUsersComponent} from "./app/users/profile-users/profile-users.component";
+import {TravellerComponent} from "./app/public/pages/sign-in/traveller/traveller.component";
+import {BussinessComponent} from "./app/public/pages/sign-in/bussiness/bussiness.component";
+import {TravellersComponent} from "./app/travellers/travellers.component";
+import {HomeTravellerComponent} from "./app/travellers/pages/home-traveller/home-traveller.component";
+import {MessagesTravellerComponent} from "./app/travellers/pages/messages-traveller/messages-traveller.component";
+import {ProfileTravellerComponent} from "./app/travellers/pages/profile-traveller/profile-traveller.component";
+import {SettingsTravellerComponent} from "./app/travellers/pages/settings-traveller/settings-traveller.component";
+import {
+  NotificationTravellerComponent
+} from "./app/travellers/pages/notification-traveller/notification-traveller.component";
+import {BussinessesComponent} from "./app/bussinesses/bussinesses.component";
+import {HomeCompanyComponent} from "./app/bussinesses/pages/home-company/home-company.component";
+import {MessagesBussinessComponent} from "./app/bussinesses/pages/messages-bussiness/messages-bussiness.component";
+import {ProfileBussinessComponent} from "./app/bussinesses/pages/profile-bussiness/profile-bussiness.component";
+import {SettingsComponent} from "./app/bussinesses/pages/settings/settings.component";
+import {
+  NotificationsBussinessComponent
+} from "./app/bussinesses/pages/notifications-bussiness/notifications-bussiness.component";
 
 const routes: Routes = [
-  {path:'', redirectTo: '/sign-in', pathMatch:"full"},
+
+
+
+  {path:'', redirectTo: '/login', pathMatch:"full"},
   {path:'', redirectTo: '/', pathMatch:"full"},
-  {path: 'sign-up', component: SignUpComponent},
-  {path: 'sign-in', component: SignInComponent},
+  {path:'login', component: SignUpComponent},
+  {path: 'sign-up', component: SignInComponent, children: [
+      {path:'traveller', component: TravellerComponent},
+      {path:'bussiness', component: BussinessComponent}
+    ]
+  },
+  {
+    path: 'travellers', component: TravellersComponent, children: [
+         { path: 'home', component: HomeTravellerComponent },
+         { path: 'messages', component: MessagesTravellerComponent },
+         { path: 'profile', component: ProfileTravellerComponent },
+         { path: 'settings', component: SettingsTravellerComponent },
+         {path: 'notifications', component: NotificationTravellerComponent},
+      ],
+  },
+  {
+    path: 'bussinesses', component: BussinessesComponent, children: [
+      { path: 'home', component: HomeCompanyComponent },
+      { path: 'messages', component: MessagesBussinessComponent },
+      { path: 'profile', component: ProfileBussinessComponent },
+      { path: 'settings', component: SettingsComponent },
+      {path: 'notifications', component: NotificationsBussinessComponent},
+    ],
+  },
+
   {path: 'home/:id', component: HomeUsersComponent},
   {path: 'search/:id', component: SearchListComponent},
   {path: 'travel-list/:id' ,component: TravelListComponent},

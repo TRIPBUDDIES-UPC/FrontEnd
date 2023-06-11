@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {SecuModel} from "../../public/model/model";
 import {SecurityService} from "../../public/service/security.service";
 import {ActivatedRoute} from "@angular/router";
+import {TemplateService} from "../../../../Shared/template.service";
 
 @Component({
   selector: 'app-profile-users',
@@ -13,7 +14,7 @@ export class ProfileUsersComponent {
   id: any;
   UserData: SecuModel;
 
-  constructor(private userService: SecurityService, private route: ActivatedRoute) {
+  constructor(private userService: TemplateService, private route: ActivatedRoute) {
     this.UserData = {} as SecuModel;
 
   }

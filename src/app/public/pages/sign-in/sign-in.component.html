@@ -1,33 +1,24 @@
-<span>  <app-header></app-header></span>
 <div class="container">
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
 
-    <mat-form-field appearance="outline" class="example-full-width">
-      <mat-label>Email</mat-label>
-      <input matInput formControlName="email" required>
-      <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
-        Ingresa un correo valido
-      </mat-error>
-      <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
-        Ingresa un correo valido
-      </mat-error>
-    </mat-form-field>
-
-
-
-
-    <mat-form-field appearance="outline" class="example-full-width">
-      <mat-label>Contraseña</mat-label>
-      <input matInput formControlName="password" type="password" required>
-      <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
-        La contraseña es requerida
-      </mat-error>
-    </mat-form-field>
-
-    <div class="button-container">
-      <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Join</button>
-      <button mat-raised-button color="primary" type="button" routerLink="//sign-up" >Register</button>
-
+  <div class="sign-up">
+    <h1>Sign up</h1>
+  </div>
+  <div class="form-container">
+    <div class="title">
+      <button mat-icon-button class="btn-back" routerLink="/login">
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <h1 class="text">Get Started With TourMates</h1>
     </div>
-  </form>
+    <section class="items-section">
+      <mat-radio-group>
+        <mat-radio-button routerLink="traveller" class="items-margin" value="after" checked>Traveller</mat-radio-button>
+        <mat-radio-button  routerLink="bussiness"  class="items-margin" value="before">Bussiness</mat-radio-button>
+      </mat-radio-group>
+    </section>
+    <router-outlet></router-outlet>
+  </div>
 </div>
+
+
+

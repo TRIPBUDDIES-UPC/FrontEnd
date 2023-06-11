@@ -39,6 +39,25 @@ import {MatSelectModule} from '@angular/material/select';
 import { ProfileUsersComponent } from './app/users/profile-users/profile-users.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { FotterComponent } from './app/public/pages/fotter/fotter.component';
+import { TravellerComponent } from './app/public/pages/sign-in/traveller/traveller.component';
+import { DialogBoxComponent } from './app/public/pages/sign-in/dialog-box/dialog-box.component';
+import { DialogBoxInvalidFormComponent } from './app/public/pages/sign-in/dialog-box-invalid-form/dialog-box-invalid-form.component';
+import { BussinessComponent } from './app/public/pages/sign-in/bussiness/bussiness.component';
+import { TravellersComponent } from './app/travellers/travellers.component';
+import { BussinessesComponent } from './app/bussinesses/bussinesses.component';
+import { HomeTravellerComponent } from './app/travellers/pages/home-traveller/home-traveller.component';
+import { MessagesTravellerComponent } from './app/travellers/pages/messages-traveller/messages-traveller.component';
+import { NotificationTravellerComponent } from './app/travellers/pages/notification-traveller/notification-traveller.component';
+import { ProfileTravellerComponent } from './app/travellers/pages/profile-traveller/profile-traveller.component';
+import { SettingsTravellerComponent } from './app/travellers/pages/settings-traveller/settings-traveller.component';
+import { HomeCompanyComponent } from './app/bussinesses/pages/home-company/home-company.component';
+import { PostPlaceComponent } from './app/bussinesses/pages/post-place/post-place.component';
+import { MessagesBussinessComponent } from './app/bussinesses/pages/messages-bussiness/messages-bussiness.component';
+import { NotificationsBussinessComponent } from './app/bussinesses/pages/notifications-bussiness/notifications-bussiness.component';
+import { ProfileBussinessComponent } from './app/bussinesses/pages/profile-bussiness/profile-bussiness.component';
+import { SettingsComponent } from './app/bussinesses/pages/settings/settings.component';
+import {CdkFixedSizeVirtualScroll} from "@angular/cdk/scrolling";
+import {MatRippleModule} from "@angular/material/core";
 
 @NgModule({
   declarations: [
@@ -56,7 +75,24 @@ import { FotterComponent } from './app/public/pages/fotter/fotter.component';
     HeaderUsersComponent,
     HeaderComponent,
     ProfileUsersComponent,
-    FotterComponent
+    FotterComponent,
+    TravellerComponent,
+    DialogBoxComponent,
+    DialogBoxInvalidFormComponent,
+    BussinessComponent,
+    TravellersComponent,
+    BussinessesComponent,
+    HomeTravellerComponent,
+    MessagesTravellerComponent,
+    NotificationTravellerComponent,
+    ProfileTravellerComponent,
+    SettingsTravellerComponent,
+    HomeCompanyComponent,
+    PostPlaceComponent,
+    MessagesBussinessComponent,
+    NotificationsBussinessComponent,
+    ProfileBussinessComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +121,9 @@ import { FotterComponent } from './app/public/pages/fotter/fotter.component';
     MatExpansionModule,
     MatButtonToggleModule,
     MatSelectModule,
-    MatSidenavModule
+    MatSidenavModule,
+    CdkFixedSizeVirtualScroll,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

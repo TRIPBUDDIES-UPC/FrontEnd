@@ -4,6 +4,7 @@ import {SecurityService} from "../../public/service/security.service";
 import {ActivatedRoute} from "@angular/router";
 import { MatSelectChange } from '@angular/material/select';
 import { Router } from '@angular/router';
+import {TemplateService} from "../../../../Shared/template.service";
 
 @Component({
   selector: 'app-header-users',
@@ -27,7 +28,7 @@ export class HeaderUsersComponent implements  OnInit{
 
 
 
-  constructor(private router: Router,private userService: SecurityService, private route: ActivatedRoute) {
+  constructor(private router: Router,private userService: TemplateService, private route: ActivatedRoute) {
     this.UserData = {} as SecuModel;
 
   }

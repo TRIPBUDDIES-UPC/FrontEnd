@@ -5,6 +5,7 @@ import { SecurityService } from '../../service/security.service';
 import {AuthService} from "../../service/auth.service";
 import {SecuModel} from "../../model/model";
 import {AppComponent} from "../../../../app.component";
+import {TemplateService} from "../../../../../Shared/template.service";
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -19,7 +20,7 @@ export class SignInComponent implements OnInit{
   id:any;
   User: SecuModel;
   constructor(private formBuilder: FormBuilder, private authService: AuthService, private router: Router,
-              private route: ActivatedRoute, private AutID: SecurityService, private  appcomponent: AppComponent) {
+              private route: ActivatedRoute, private AutID: TemplateService, private  appcomponent: AppComponent) {
     this.User = {} as SecuModel;
   }
 

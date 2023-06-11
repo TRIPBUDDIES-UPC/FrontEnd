@@ -1,0 +1,71 @@
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <div class="inner-content mat-elevation-z8">
+      <mat-grid-list cols="4" rowHeight="88vh">
+        <mat-grid-tile #first colspan="1" rowspan="1">
+          <mat-card class="traveller-personal-info">
+            <div class="img-container">
+              <img
+                [src]="traveller.image"
+                alt="" class="card-img" />
+            </div>
+
+            <div class="img-container">
+              <div class="card-container">
+                <h1 class="card-title-text">{{traveller.firstname}}  {{traveller.lastname}} </h1>
+                <p class="card-paragraph-text">
+                  {{traveller.description}}
+                </p>
+                <ul>
+                  <li>
+                    <mat-icon>email</mat-icon>
+                    <div class="inner-li">
+                      <span>Email</span>
+                      <br />
+                      <span>{{traveller.email}}</span>
+                    </div>
+                  </li>
+                  <li>
+                    <mat-icon>phone</mat-icon>
+                    <div class="inner-li">
+                      <span>Phone</span>
+                      <br />
+                      <span> {{traveller.phone}} </span>
+                    </div>
+                  </li>
+                  <!-- facebook account -->
+                  <li>
+                    <mat-icon>facebook</mat-icon>
+                    <div class="inner-li">
+                      <span>Facebook</span>
+                      <br />
+                      <span>{{facebook}}</span>
+                    </div>
+                  </li>
+                  <!-- instagram account -->
+                  <li>
+                    <mat-icon>I</mat-icon>
+                    <div class="inner-li">
+                      <span>Instagram</span>
+                      <br />
+                      <span>{{instagram}}</span>
+                    </div>
+                  </li>
+                  <!-- twitter account -->
+                  <li>
+                    <mat-icon>T</mat-icon>
+                    <div class="inner-li">
+                      <span>Twitter</span>
+                      <br />
+                      <span>{{twitter}}</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </mat-card>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
