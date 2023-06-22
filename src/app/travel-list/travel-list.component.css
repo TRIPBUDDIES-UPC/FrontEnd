@@ -1,5 +1,27 @@
-.container{
+.container {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.select-options {
+  margin-bottom: 20px;
+}
+
+.profile-card {
+  text-align: center;
+  margin: 20px;
+}
+
+
+.profile-card h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.profile-card p {
+  margin: 0;
+  font-size: 14px;
 }

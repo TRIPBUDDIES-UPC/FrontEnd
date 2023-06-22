@@ -1,3 +1,55 @@
-<div class="container">
-    <p> SOON </p>
-</div>
+
+
+  <mat-card style="display: flex; align-items: center;">
+    <mat-card-header>
+    <mat-card-title style="padding:10px; font-size:20px">Solicitar servicios de tour:</mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+        <mat-card-title style="padding:10px; font-size:14px">Seleccione su distrito:</mat-card-title>
+          <mat-form-field>
+            <select matNativeControl required>
+              <option value="" disabled selected>Seleccione una opción</option>
+              <option value="barranco">Barranco</option>
+              <option value="surquillo">Surquillo</option>
+              <option value="lince">Lince</option>
+              <option value="magdalena">Magdalena</option>
+              <option value="san-isidro">San Isidro</option>
+              <option value="miraflores">Miraflores</option>
+              <option value="san-borja">San Borja</option>
+              <option value="san-miguel">San Luis</option>
+              <option value="la-molina">La Molina</option>
+            </select>
+          </mat-form-field>
+      </mat-card-actions>
+    <mat-card-actions>
+      <mat-card-title style="padding:10px; font-size:14px">Seleccione su preferencia:</mat-card-title>
+      <mat-form-field>
+        <select matNativeControl required>
+          <option value="" disabled selected>Seleccione una opción</option>
+          <option value="trekking">Treking</option>
+          <option value="cannoping">Cannoping</option>
+          <option value="playa">Playa</option>
+          <option value="sitios-turísticos">Sitios turísticos</option>
+        </select>
+      </mat-form-field>
+
+      <mat-divider></mat-divider>
+    </mat-card-actions>
+    <mat-card-actions align="end">
+      <button mat-button>Buscar</button>
+      <button mat-button>Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card>
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1Acn2j8EOnJNPMWsfThMzs_VRvkStwVk&ehbc=2E312F" width="640" height="480"></iframe>
+      </mat-grid-tile>
+      <mat-card>
+        <mat-grid-tile>PROFILE</mat-grid-tile>
+
+
+      </mat-card>
+    </mat-grid-list>
+  </mat-card>
+
