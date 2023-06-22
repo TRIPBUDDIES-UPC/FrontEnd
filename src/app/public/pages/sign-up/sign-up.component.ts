@@ -99,12 +99,12 @@ export class SignUpComponent implements OnInit{
   }
   goUserTraveller(id : any) {
     localStorage.setItem("id", id);
-    this.router.navigate(['/travellers/home']);
+    this.router.navigate([`/travellers/home/${id}`]);
   }
 
   goUserBussiness(id : any) {
     localStorage.setItem("id", id);
-    this.router.navigate(['/bussinesses/home']);
+    this.router.navigate([`/bussiness/home/${id}`]);
   }
 
   verifyAccount() {

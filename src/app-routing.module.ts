@@ -28,11 +28,11 @@ import {SettingsComponent} from "./app/bussinesses/pages/settings/settings.compo
 import {
   NotificationsBussinessComponent
 } from "./app/bussinesses/pages/notifications-bussiness/notifications-bussiness.component";
+import {B} from "@angular/cdk/keycodes";
+import {EditProfileComponent} from "./app/bussinesses/pages/edit-profile/edit-profile.component";
+import {PlacesComponent} from "./app/bussinesses/pages/places/places.component";
 
 const routes: Routes = [
-
-
-
   {path:'', redirectTo: '/login', pathMatch:"full"},
   {path:'', redirectTo: '/', pathMatch:"full"},
   {path:'login', component: SignUpComponent},
@@ -51,12 +51,14 @@ const routes: Routes = [
       ],
   },
   {
-    path: 'bussinesses', component: BussinessesComponent, children: [
-      { path: 'home', component: HomeCompanyComponent },
-      { path: 'messages', component: MessagesBussinessComponent },
-      { path: 'profile', component: ProfileBussinessComponent },
-      { path: 'settings', component: SettingsComponent },
-      {path: 'notifications', component: NotificationsBussinessComponent},
+    path: 'bussiness', component: BussinessesComponent, children: [
+      { path: 'home/:id', component: HomeCompanyComponent },
+      { path: 'messages/:id', component: MessagesBussinessComponent },
+      { path: 'profile/:id', component: ProfileBussinessComponent },
+      { path: 'profile/editProfile/:id', component: EditProfileComponent },
+      { path: 'settings/:id', component: SettingsComponent },
+      {path: 'notifications/:id', component: NotificationsBussinessComponent},
+      {path: 'places/:id', component: PlacesComponent},
     ],
   },
 

@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, catchError, retry, throwError } from 'rxjs';
-import {BussinessModel} from "../../public/model/BussinessModel";
+import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {ActivatedRoute} from "@angular/router";
+import {catchError, Observable, retry, throwError} from "rxjs";
+import {BussinessModel} from "../../public/model/BussinessModel";
+import {places} from "../../public/model/places";
 
 @Injectable({
   providedIn: 'root'
 })
-export class BussinessServicesService {
-  base_url="http://localhost:3000/companies"
+export class BussinnessPlacesService {
+  base_url="http://localhost:3000/Places"
   constructor(private http:HttpClient, private route: ActivatedRoute) {
   }
   httpOptions={
@@ -31,35 +32,46 @@ export class BussinessServicesService {
   }
 
   /* post */
-  createItem(item: any): Observable<BussinessModel>{
+  createItem(item: any): Observable<places>{
     return this.http
-      .post<BussinessModel>(this.base_url, JSON.stringify(item), this.httpOptions)
+      .post<places>(this.base_url, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError))
   }
 
   ///* GET */
-  getList(): Observable<BussinessModel>{
+  getList(): Observable<places>{
     return this.http
-      .get<BussinessModel>(this.base_url)
+      .get<places>(this.base_url)
       .pipe(retry(2), catchError(this.handleError))
   }
 
-  getItem(id: any): Observable<BussinessModel>{
+  getItem(id: any): Observable<places>{
     return this.http
-      .get<BussinessModel>(this.base_url + '/' + id)
+      .get<places>(this.base_url + '/' + id)
       .pipe(retry(2), catchError(this.handleError))
   }
+  getItemByBussiness(BussinessId: number): Observable<places> {
+    return this.http.get<places>(this.base_url + '?BussinessId=' + BussinessId)
+      .pipe(
+        retry(2),
+        catchError(this.handleError)
+      );
+  }
+
+
+
+
 
   /* update. usa el put: actualiza datos*/
-  updateItem(id: any, item: any): Observable<BussinessModel>{
+  updateItem(id: any, item: any): Observable<places>{
     return this.http /* se actualiza el item en formato JSON en la url dada */
-      .put<BussinessModel>(this.base_url + '/' + id, JSON.stringify(item), this.httpOptions)
+      .put<places>(this.base_url + '/' + id, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError))
   }
   /* delete */
-  deleteItem(id: any): Observable<BussinessModel>{
+  deleteItem(id: any): Observable<places>{
     return this.http
-      .delete<BussinessModel>(`${this.base_url}/${id}`, this.httpOptions)
+      .delete<places>(`${this.base_url}/${id}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError))
   }
 

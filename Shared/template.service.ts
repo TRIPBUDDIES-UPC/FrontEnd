@@ -11,9 +11,9 @@ import {TravellerModel} from "../src/app/public/model/TravellerModel";
 })
 export class TemplateService {
 
-  basePath = 'https://tripbuddieswebservice-production.up.railway.app/users';
-  urlBussiness = "https://tripbuddieswebservice-production.up.railway.app/businesses"
-  urlTraveller = "https://tripbuddieswebservice-production.up.railway.app/travellers"
+  basePath = 'http://localhost:3000/travellers'
+  urlBussiness = "http://localhost:3000/companies"
+  urlTraveller = "http://localhost:3000/travellers"
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

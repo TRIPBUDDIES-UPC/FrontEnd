@@ -58,7 +58,10 @@ import { ProfileBussinessComponent } from './app/bussinesses/pages/profile-bussi
 import { SettingsComponent } from './app/bussinesses/pages/settings/settings.component';
 import {CdkFixedSizeVirtualScroll} from "@angular/cdk/scrolling";
 import {MatRippleModule} from "@angular/material/core";
-
+import { HeaderBusinessComponent } from './app/bussinesses/pages/header-business/header-business.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { EditProfileComponent } from './app/bussinesses/pages/edit-profile/edit-profile.component';
+import { PlacesComponent } from './app/bussinesses/pages/places/places.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,7 +95,10 @@ import {MatRippleModule} from "@angular/material/core";
     MessagesBussinessComponent,
     NotificationsBussinessComponent,
     ProfileBussinessComponent,
-    SettingsComponent
+    SettingsComponent,
+    HeaderBusinessComponent,
+    EditProfileComponent,
+    PlacesComponent
   ],
   imports: [
     BrowserModule,
@@ -123,7 +129,9 @@ import {MatRippleModule} from "@angular/material/core";
     MatSelectModule,
     MatSidenavModule,
     CdkFixedSizeVirtualScroll,
-    MatRippleModule
+    MatRippleModule,
+    MatMenuModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
