@@ -1,0 +1,38 @@
+
+<div class="Content">
+  <form (submit)="onSumit()" #BussinessForm="ngForm">
+    <div class="container">
+      <div class="content_title">
+        <h1 class="title">Add Place</h1>
+      </div>
+      <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+        <mat-label>name</mat-label>
+        <input type="text" matInput placeholder="name" name="name" required [(ngModel)]="PlacesData.name">
+      </mat-form-field>
+      <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+        <mat-label>description</mat-label>
+        <input type="text" matInput placeholder="description" name="description" required [(ngModel)]="PlacesData.description">
+      </mat-form-field>
+      <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+        <mat-label>country</mat-label>
+        <input type="text" matInput placeholder="country" name="country" required [(ngModel)]="PlacesData.country">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+        <mat-label>location</mat-label>
+        <input type="text" matInput placeholder="location" name="location" required [(ngModel)]="PlacesData.location">
+      </mat-form-field>
+      <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+        <mat-label>price</mat-label>
+        <input type="text" matInput placeholder="price" name="price" required [(ngModel)]="PlacesData.price">
+      </mat-form-field>
+      <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+        <mat-label>imagenurl</mat-label>
+        <input type="text" matInput placeholder="price" name="imagenurl" required [(ngModel)]="PlacesData.imagenurl">
+      </mat-form-field>
+
+      <button mat-button class="edit" [routerLink]="['/bussiness/places',User.id]" (click)="add()">Add</button> &nbsp;
+      <button mat-button class="edit" [routerLink]="['/bussiness/places',User.id]" >Cancel</button> &nbsp;
+    </div>
+  </form>
+</div>

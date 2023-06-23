@@ -1,0 +1,34 @@
+
+<div class="content">
+<form (submit)="onSumit()" #BussinessForm="ngForm">
+  <div class="container">
+    <div class="content_title">
+      <h1 class="title">EDIT PROFILE</h1>
+    </div>
+    <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+      <mat-label>firstname</mat-label>
+      <input type="text" matInput placeholder="firstname" name="firstname" required [(ngModel)]="UserBussiness.firstName">
+    </mat-form-field>
+    <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+      <mat-label>lastName</mat-label>
+      <input type="text" matInput placeholder="lastName" name="lastName" required [(ngModel)]="UserBussiness.lastName">
+    </mat-form-field>
+    <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+      <mat-label>owner</mat-label>
+      <input type="text" matInput placeholder="owner" name="owner" required [(ngModel)]="UserBussiness.owner">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+      <mat-label>phone</mat-label>
+      <input type="text" matInput placeholder="phone" name="phone" required [(ngModel)]="UserBussiness.phone">
+    </mat-form-field>
+    <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+      <mat-label>ruc</mat-label>
+      <input type="text" matInput placeholder="ruc" name="ruc" required [(ngModel)]="UserBussiness.ruc">
+    </mat-form-field>
+
+    <button mat-button class="edit" [routerLink]="['/bussiness/profile',UserBussiness.id]" (click)="Edit()">Edit</button> &nbsp;
+    <button mat-button class="edit" [routerLink]="['/bussiness/profile',UserBussiness.id]" >Cancel</button> &nbsp;
+  </div>
+</form>
+</div>

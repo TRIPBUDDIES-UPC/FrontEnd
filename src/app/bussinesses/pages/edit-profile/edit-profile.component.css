@@ -1,0 +1,38 @@
+.container{
+  background-size: 100% ;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+}
+.content_title{
+  padding-bottom: 30px;
+  padding-top: 30px;
+  align-items: center;
+
+}
+.title{
+  font-weight: bold;
+  font-size:35px;
+
+}
+mat-form-field{
+  margin-right: 30px;
+}
+.content{
+
+  background: linear-gradient(#125699, transparent);
+  background-size: 100% ;
+  background-size: cover;
+  height: 89%;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.edit{
+  position: relative;
+  border-radius: 10px;
+  color: royalblue;
+  box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+
+}
