@@ -31,6 +31,8 @@ import {
 import {B} from "@angular/cdk/keycodes";
 import {EditProfileComponent} from "./app/bussinesses/pages/edit-profile/edit-profile.component";
 import {PlacesComponent} from "./app/bussinesses/pages/places/places.component";
+import {AddPlacesComponent} from "./app/bussinesses/pages/add-places/add-places.component";
+import {EditPlacesComponent} from "./app/bussinesses/pages/edit-places/edit-places.component";
 
 const routes: Routes = [
   {path:'', redirectTo: '/login', pathMatch:"full"},
@@ -59,6 +61,8 @@ const routes: Routes = [
       { path: 'settings/:id', component: SettingsComponent },
       {path: 'notifications/:id', component: NotificationsBussinessComponent},
       {path: 'places/:id', component: PlacesComponent},
+      {path: 'places/add/:id', component: AddPlacesComponent},
+      {path: 'places/:id/update/:Updateid', component: EditPlacesComponent},
     ],
   },
 

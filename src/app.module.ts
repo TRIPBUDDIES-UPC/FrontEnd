@@ -62,6 +62,8 @@ import { HeaderBusinessComponent } from './app/bussinesses/pages/header-business
 import {MatMenuModule} from '@angular/material/menu';
 import { EditProfileComponent } from './app/bussinesses/pages/edit-profile/edit-profile.component';
 import { PlacesComponent } from './app/bussinesses/pages/places/places.component';
+import { AddPlacesComponent } from './app/bussinesses/pages/add-places/add-places.component';
+import { EditPlacesComponent } from './app/bussinesses/pages/edit-places/edit-places.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +100,9 @@ import { PlacesComponent } from './app/bussinesses/pages/places/places.component
     SettingsComponent,
     HeaderBusinessComponent,
     EditProfileComponent,
-    PlacesComponent
+    PlacesComponent,
+    AddPlacesComponent,
+    EditPlacesComponent
   ],
   imports: [
     BrowserModule,

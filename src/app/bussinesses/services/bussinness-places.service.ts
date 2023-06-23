@@ -50,8 +50,8 @@ export class BussinnessPlacesService {
       .get<places>(this.base_url + '/' + id)
       .pipe(retry(2), catchError(this.handleError))
   }
-  getItemByBussiness(BussinessId: number): Observable<places> {
-    return this.http.get<places>(this.base_url + '?BussinessId=' + BussinessId)
+  getItemByBussiness(BussinessId: any): Observable<places> {
+    return this.http.get<places>(this.base_url + '/?BussinessId=' + BussinessId)
       .pipe(
         retry(2),
         catchError(this.handleError)

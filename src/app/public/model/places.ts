@@ -1,10 +1,10 @@
  export interface places{
-  id: any,
-  description: string;
+id: number,
+description: string;
 name:string;
-price:any;
+price:number;
 imagenurl:string;
 location:string;
 country:string;
-BussinessId:string;
+   BussinessId:number;
 }
