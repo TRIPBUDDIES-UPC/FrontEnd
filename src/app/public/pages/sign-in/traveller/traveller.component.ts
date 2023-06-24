@@ -4,7 +4,6 @@ import {TravellerModel} from "../../../model/TravellerModel";
 import {SecurityService} from "../../../service/security.service";
 import {MatDialog} from "@angular/material/dialog";
 import {Router} from "@angular/router";
-import {TravellerProfile} from "../../../model/TravellerProfile";
 import {DialogBoxInvalidFormComponent} from "../dialog-box-invalid-form/dialog-box-invalid-form.component";
 import {TemplateService} from "../../../../../../Shared/template.service";
 @Component({
@@ -19,9 +18,7 @@ export class TravellerComponent implements OnInit{
   pass: String = '';
   registered: boolean = false;
   Traveller:TravellerModel;
-  Travellerprofile: TravellerProfile;
   constructor(private service: TemplateService, private formBuilder: FormBuilder, public dialog: MatDialog, private rooter: Router) {
-    this.Travellerprofile = {} as TravellerProfile;
     this.userTral = {} as any;
     this.Traveller = {} as TravellerModel;
     this.userTral = {} as any;
@@ -75,8 +72,8 @@ export class TravellerComponent implements OnInit{
     }
   }
   AddTraveller() {
-    this.Traveller.firstname =  this.registerForm.get('first_name')?.value;
-    this.Traveller.lastname =  this.registerForm.get('last_name')?.value;
+    this.Traveller.first_name =  this.registerForm.get('first_name')?.value;
+    this.Traveller.last_name =  this.registerForm.get('last_name')?.value;
     this.Traveller.phone =  this.registerForm.get('phone')?.value;
     this.Traveller.email =  this.registerForm.get('email')?.value;
     this.Traveller.password =  this.registerForm.get('password')?.value;
@@ -103,11 +100,9 @@ export class TravellerComponent implements OnInit{
       this.userTral = JSON.parse(req.responseText);
       console.log('User assigned to userDev');
       console.log(this.userTral);
-      this.Travellerprofile.name = "Traveller Profile " + this.registerForm.get("first_name")?.value;
       var req2 = new XMLHttpRequest();
       req2.open('POST', `tripbuddieswebservice-production.up.railway.app/api/v1/digital_profiles/${this.userTral.id}`, false);
       req2.setRequestHeader('Content-Type', 'application/json');
-      req2.send(JSON.stringify(this.Travellerprofile));
       console.log('Post Traveller Profile');
       console.log(req2.responseText);
 

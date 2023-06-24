@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {TravellerProfile} from "../../model/TravellerProfile";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {DialogBoxInvalidFormComponent} from "../sign-in/dialog-box-invalid-form/dialog-box-invalid-form.component";
@@ -15,7 +14,6 @@ export class SignUpComponent implements OnInit{
   userTraveller: Array<any>= [];
   userBussiness: Array<any>= [];
 
-  digitalProfile!: TravellerProfile;
   loggedIn = false;
   registered = false;
   logger: string = 'traveller';
@@ -24,7 +22,6 @@ export class SignUpComponent implements OnInit{
     password : ["", {validators: [Validators.required, Validators.minLength(8)], updateOn: 'change'}],
   });
   constructor(private formBuilder:FormBuilder, public dialog: MatDialog, private router: Router, private service: TemplateService){
-    this.digitalProfile = {} as TravellerProfile;
   }
   ngOnInit(): void {
     this.setEmailValidation();

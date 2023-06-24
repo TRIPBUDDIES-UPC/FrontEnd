@@ -64,6 +64,9 @@ import { EditProfileComponent } from './app/bussinesses/pages/edit-profile/edit-
 import { PlacesComponent } from './app/bussinesses/pages/places/places.component';
 import { AddPlacesComponent } from './app/bussinesses/pages/add-places/add-places.component';
 import { EditPlacesComponent } from './app/bussinesses/pages/edit-places/edit-places.component';
+import { HeaderTravellerComponent } from './app/travellers/pages/header-traveller/header-traveller.component';
+import { AcercadeComponent } from './app/travellers/pages/acercade/acercade.component';
+import { ViewPlacesComponent } from './app/travellers/pages/view-places/view-places.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -102,7 +105,10 @@ import { EditPlacesComponent } from './app/bussinesses/pages/edit-places/edit-pl
     EditProfileComponent,
     PlacesComponent,
     AddPlacesComponent,
-    EditPlacesComponent
+    EditPlacesComponent,
+    HeaderTravellerComponent,
+    AcercadeComponent,
+    ViewPlacesComponent
   ],
   imports: [
     BrowserModule,

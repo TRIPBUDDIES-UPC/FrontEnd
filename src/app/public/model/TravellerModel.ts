@@ -1,11 +1,12 @@
 export interface TravellerModel{
   id?: number;
-  firstname: String;
-  lastname:String;
-  email: String;
-  phone:String;
-  password: String;
-  role: String;
-  description: String;
-  image: String;
+  first_name: string;
+  last_name:string;
+  email: string;
+  phone:string;
+  password: string;
+  role: string;
+  description: string;
+  image: string;
+  adreess:string;
 }

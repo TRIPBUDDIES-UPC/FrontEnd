@@ -33,6 +33,8 @@ import {EditProfileComponent} from "./app/bussinesses/pages/edit-profile/edit-pr
 import {PlacesComponent} from "./app/bussinesses/pages/places/places.component";
 import {AddPlacesComponent} from "./app/bussinesses/pages/add-places/add-places.component";
 import {EditPlacesComponent} from "./app/bussinesses/pages/edit-places/edit-places.component";
+import {AcercadeComponent} from "./app/travellers/pages/acercade/acercade.component";
+import {ViewPlacesComponent} from "./app/travellers/pages/view-places/view-places.component";
 
 const routes: Routes = [
   {path:'', redirectTo: '/login', pathMatch:"full"},
@@ -45,12 +47,15 @@ const routes: Routes = [
   },
   {
     path: 'travellers', component: TravellersComponent, children: [
-         { path: 'home', component: HomeTravellerComponent },
-         { path: 'messages', component: MessagesTravellerComponent },
-         { path: 'profile', component: ProfileTravellerComponent },
+         { path: 'home/:id', component: HomeTravellerComponent },
+         { path: 'messages/:id', component: MessagesTravellerComponent },
+      { path: 'acercade/:id', component: AcercadeComponent },
+      { path: 'profile/:id', component: ProfileTravellerComponent },
          { path: 'settings', component: SettingsTravellerComponent },
          {path: 'notifications', component: NotificationTravellerComponent},
-      ],
+      {path: 'views/places/:id', component: ViewPlacesComponent},
+
+    ],
   },
   {
     path: 'bussiness', component: BussinessesComponent, children: [

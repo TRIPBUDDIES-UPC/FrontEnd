@@ -1,0 +1,17 @@
+.content{
+  background-image: url("../../assets/images/Imagen-Bussiness.png");
+  background-size: 100% ;
+  background-size: cover;
+  height: 89.5%;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+
+}
+.contentCard{
+
+  align-items: center;
+
+}

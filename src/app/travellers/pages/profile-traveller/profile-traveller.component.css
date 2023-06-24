@@ -1,268 +1,93 @@
-.inner-content {
-  height: auto;
-  margin: 16px 16px 0px 32px;
-  background-color: #efefef;
-  border-radius: 10px;
+
+.image-back{
+  background-image:url("../../assets/images/background-bussiness.jpeg");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex; /* Aplica flexbox */
+  flex-direction: row; /* Establece la dirección horizontal */
 }
 
-mat-sidenav-container {
-  height: calc(100vh - 65px);
-}
-
-mat-icon {
-  margin-right: 8px;
-}
-
-.img-container {
+mat-card{
+  background-color: rgba(0, 0, 0, 0.6); /* Color de fondo casi visible */
+  width: 50vh;
+  height: 89.5vh; /* Establecer la altura de la tarjeta al 100% de la altura de la ventana */
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 500px; /* Margen entre los mat-card */
+  border-box: 25px;
 }
 
-.card-img {
-  margin: auto;
-  width: 170px;
-  height: 170px;
+.Edit{
+  margin-left: 500px;
+  background-color: white;
+  align-self: center;
+  height: 89.5vh; /* Establecer la altura de la tarjeta al 100% de la altura de la ventana */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.custom-card {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+  margin-bottom: 30px;
+
 }
 
-.card-title-text {
-  margin-top: 10px;
-  text-align: center;
-  text-decoration: black;
+.Buttonedit{
+  Color:royalblue;
 }
 
-.card-paragraph-text {
-  margin-top: 5px;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  text-align: justify;
-  text-justify: inter-word;
+
+p{
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+strong{
+  margin-right: 20px;
 }
 
-.traveller-career-info {
-  display: flex;
-  width: 980%;
-  flex-direction: column;
-  margin: 1rem;
-  overflow: auto;
-  height: 95%;
+p a {
+  Color:white;
 }
 
-.traveller-personal-info {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  height: 95%;
+mat-card-content{
+  align-self: flex-start;
+  padding: 5px;
+  margin:10px;
 }
 
-.img-in {
-  display: flex;
-  width: 95%;
-  height: 44vh;
-  margin: auto;
-  border-radius: 1%;
+.Table{
+  margin-bottom: 100px;
 }
+.custom-title {
+  font-size: 36px; /* Tamaño de fuente */
+  color: white; /* Color de texto */
+  font-weight: bold; /* Grosor de la fuente */
+  text-align: center; /* Alineación del texto */
+  text-transform: uppercase; /* Transformación de texto a mayúsculas */
+  /* Margen inferior */
 
-.img-container-2 {
-  margin: 1rem;
-  display: flex;
-  justify-content: center;
 }
-
-ul {
-  list-style: disc;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-li {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 0.3rem;
-}
-
-.traveller-list li {
-  margin-left: 2rem;
-  display: list-item;
-  color: goldenrod;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-ul span {
-  color: black;
-}
-
-.traveller-container {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  flex-wrap: wrap;
-}
-
-.education-card {
-  width: 30%;
-  box-sizing: border-box;
-  margin: 0.3rem;
-}
-
-mat-card-subtitle span {
-  color: goldenrod;
-}
-
-mat-card-title p {
-  font-size: 1.3rem;
-  display: flex;
-  justify-content: center;
-}
-
-mat-card-title .inner-paragraph {
-  font-size: 1.1rem;
-}
-
-.main-title {
-  font-size: 1.5rem;
-  font-weight: 550;
-}
-
-.skills-card {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 30%;
-  box-sizing: border-box;
-  margin: 0.3rem;
-}
-
-.skills-img {
-  width: 60px;
-  height: 60px;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 45%;
-  box-sizing: border-box;
-  margin: 0.3rem;
-}
-
-.certificate-card {
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  width: 65%;
-  box-sizing: border-box;
-  margin: 0.3rem;
-}
-
-mat-card-title .marvel-c {
-  display: flex;
-  justify-content: start;
-}
-
-.certificate-header-image {
-  background-image: url("https://img.icons8.com/color/480/c-programming.png");
-  background-size: cover;
-}
-
-mat-card-content .certificate-date {
-  display: flex;
-  justify-content: end;
-  margin-left: 8rem;
-}
-
-.card-color {
-  background-color: #f7f8fd;
-  color: black;
-}
-
-.project-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-}
-
-@media screen and (max-width: 1215px) {
-  .education-card {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0.3rem;
-  }
-
-  .skills-card {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0.3rem;
-  }
-
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0.3rem;
-  }
-
-  .certificate-card {
-    display: flex;
-    flex-direction: row;
-    box-sizing: border-box;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0.3rem;
-  }
-
-  mat-card-content .certificate-date {
-    display: flex;
-    justify-content: end;
-    margin-left: 0.1rem;
-  }
-
-  .traveller-career-info {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    margin: 0;
-    overflow: auto;
-    height: 98%;
-  }
-
-  .interno {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .this-main-container {
-    margin-top: 15rem;
-    min-height: 2360px;
-    overflow: hidden;
-  }
-
-  .img-in {
-    display: flex;
-    width: 100%;
-    height: 34vw;
-    margin: auto;
-    border-radius: 1%;
-  }
-
-  li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 0.8rem;
-  }
+.container{
+  margin-bottom: 10px;
 }

@@ -7,12 +7,21 @@ import {Injectable} from "@angular/core";
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
 import {TravellerModel} from "../../public/model/TravellerModel";
+import {BussinessModel} from "../../public/model/BussinessModel";
 
 @Injectable({
   providedIn: 'root',
 })
+
+
+
+
+
+
+
+
 export class TravellersService{
-  BaseURL: string = 'https://tripbuddieswebservice-production.up.railway.app/api/v1/travellers';
+  base_url: string = 'http://localhost:3000/travellers';
   socialNetworks = 'https://tripbuddieswebservice-production.up.railway.app/api/v1/socialNetworks';
   PostURL: string = 'https://tripbuddieswebservice-production.up.railway.app/api/v1/posts';
 
@@ -34,22 +43,37 @@ export class TravellersService{
       'something happened with request, please try again later'
     );
   }
-  GetAllTralls(): Observable<TravellerModel> {
+  createItem(item: any): Observable<TravellerModel>{
     return this.http
-      .get<TravellerModel>(this.BaseURL, this.httpOptions)
-      .pipe(retry(2), catchError(this.handleError));
-  }
-  GetTrallById(id: number): Observable<TravellerModel> {
-    return this.http
-      .get<TravellerModel>(`${this.BaseURL}/${id}`, this.httpOptions)
-      .pipe(retry(2), catchError(this.handleError));
-  }
-  updateTrallv(dev: TravellerModel): Observable<TravellerModel> {
-    return this.http
-      .put<TravellerModel>(`${this.BaseURL}/${dev.id}`, JSON.stringify(dev), this.httpOptions)
-      .pipe(retry(2), catchError(this.handleError));
+      .post<TravellerModel>(this.base_url, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError))
   }
 
+  ///* GET */
+  getList(): Observable<TravellerModel>{
+    return this.http
+      .get<TravellerModel>(this.base_url)
+      .pipe(retry(2), catchError(this.handleError))
+  }
+
+  getItem(id: any): Observable<TravellerModel>{
+    return this.http
+      .get<TravellerModel>(this.base_url + '/' + id)
+      .pipe(retry(2), catchError(this.handleError))
+  }
+
+  /* update. usa el put: actualiza datos*/
+  updateItem(id: any, item: any): Observable<TravellerModel>{
+    return this.http /* se actualiza el item en formato JSON en la url dada */
+      .put<TravellerModel>(this.base_url + '/' + id, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError))
+  }
+  /* delete */
+  deleteItem(id: any): Observable<TravellerModel>{
+    return this.http
+      .delete<TravellerModel>(`${this.base_url}/${id}`, this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError))
+  }
   GetSocialNetworkByUserId(id: number): Observable<object> {
     return this.http
       .get<object>(this.socialNetworks + '/user/' + id, this.httpOptions)

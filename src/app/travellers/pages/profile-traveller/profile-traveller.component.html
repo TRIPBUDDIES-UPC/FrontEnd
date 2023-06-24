@@ -1,71 +1,76 @@
-<mat-sidenav-container>
-  <mat-sidenav-content>
-    <div class="inner-content mat-elevation-z8">
-      <mat-grid-list cols="4" rowHeight="88vh">
-        <mat-grid-tile #first colspan="1" rowspan="1">
-          <mat-card class="traveller-personal-info">
-            <div class="img-container">
-              <img
-                [src]="traveller.image"
-                alt="" class="card-img" />
-            </div>
+<div class="image-back">
+  <mat-card *ngIf="!showElement">
+    <mat-card-header style="margin-bottom: 50px;">
+      <mat-card-title class="custom-title">PROFILE</mat-card-title>
+    </mat-card-header>
+    <img class="avatar" src="https://www.softzone.es/app/uploads/2018/04/guest.png" alt="Foto de perfil">
+    <div class="Table">
+      <mat-card-content>
+        <div >
+          <p><strong>FirstName:</strong><a>{{UserTraveller.first_name}}</a></p>
+        </div>
+      </mat-card-content>
+      <mat-card-content>
+        <div>
+          <p><strong>LastName:</strong><a>{{UserTraveller.last_name}}</a></p>
+        </div>
+      </mat-card-content>
+      <mat-card-content>
+        <div>
+          <p><strong>Description:</strong><a>{{UserTraveller.description}}</a></p>
+        </div>
+      </mat-card-content>
 
-            <div class="img-container">
-              <div class="card-container">
-                <h1 class="card-title-text">{{traveller.firstname}}  {{traveller.lastname}} </h1>
-                <p class="card-paragraph-text">
-                  {{traveller.description}}
-                </p>
-                <ul>
-                  <li>
-                    <mat-icon>email</mat-icon>
-                    <div class="inner-li">
-                      <span>Email</span>
-                      <br />
-                      <span>{{traveller.email}}</span>
-                    </div>
-                  </li>
-                  <li>
-                    <mat-icon>phone</mat-icon>
-                    <div class="inner-li">
-                      <span>Phone</span>
-                      <br />
-                      <span> {{traveller.phone}} </span>
-                    </div>
-                  </li>
-                  <!-- facebook account -->
-                  <li>
-                    <mat-icon>facebook</mat-icon>
-                    <div class="inner-li">
-                      <span>Facebook</span>
-                      <br />
-                      <span>{{facebook}}</span>
-                    </div>
-                  </li>
-                  <!-- instagram account -->
-                  <li>
-                    <mat-icon>I</mat-icon>
-                    <div class="inner-li">
-                      <span>Instagram</span>
-                      <br />
-                      <span>{{instagram}}</span>
-                    </div>
-                  </li>
-                  <!-- twitter account -->
-                  <li>
-                    <mat-icon>T</mat-icon>
-                    <div class="inner-li">
-                      <span>Twitter</span>
-                      <br />
-                      <span>{{twitter}}</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </mat-card>
-        </mat-grid-tile>
-      </mat-grid-list>
+
+      <mat-card-content>
+        <div><p><strong>address:</strong><a>{{UserTraveller.adreess}}</a></p></div>
+      </mat-card-content>
+      <mat-card-content>
+        <div><p><strong>Phone:</strong> <a>{{UserTraveller.phone}}</a></p></div>
+      </mat-card-content>
+      <mat-card-content>
+        <div><p><strong>Email:</strong><a>{{UserTraveller.email}}</a></p></div>
+      </mat-card-content>
+
+      <mat-card-content style="align-self: flex-end;">
+        <button mat-flat-button [disabled]="buttonDisabled"  style=" background:royalblue;" (click)="toggleElement()">Edit Profile</button>
+      </mat-card-content>
     </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+
+  </mat-card>
+  <mat-card class="Edit" *ngIf="showElement">
+    <mat-card-header>
+      <p>Edit Profile</p>
+    </mat-card-header>
+    <mat-card-content>
+      <form (submit)="onSumit()" #travellerForm="ngForm">
+        <div class="container">
+          <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+            <mat-label>firstname</mat-label>
+            <input type="text" matInput placeholder="firstname" name="first_name" required [(ngModel)]="UserTraveller.first_name">
+          </mat-form-field>
+          <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+            <mat-label>lastName</mat-label>
+            <input type="text" matInput placeholder="lastName" name="lastName" required [(ngModel)]="UserTraveller.last_name">
+          </mat-form-field>
+          <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+            <mat-label>description</mat-label>
+            <input type="text" matInput placeholder="description" name="description" required [(ngModel)]="UserTraveller.description">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+            <mat-label>adreess</mat-label>
+            <input type="text" matInput placeholder="adreess" name="adreess" required [(ngModel)]="UserTraveller.adreess">
+          </mat-form-field>
+          <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
+            <mat-label>phone</mat-label>
+            <input type="text" matInput placeholder="phone" name="phone" required [(ngModel)]="UserTraveller.phone">
+          </mat-form-field>
+
+          <button mat-button class="edit" (click)="update()">Edit</button> &nbsp;
+          <button mat-button class="edit" (click)="cancel()">cancel</button> &nbsp;
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

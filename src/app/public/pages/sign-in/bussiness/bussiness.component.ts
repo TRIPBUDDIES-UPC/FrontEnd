@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
-import {TravellerProfile} from "../../../model/TravellerProfile";
 import {SecurityService} from "../../../service/security.service";
 import {MatDialog} from "@angular/material/dialog";
 import {Router} from "@angular/router";
@@ -18,11 +17,9 @@ export class BussinessComponent implements OnInit{
   Bussiness: BussinessModel;
   pass: String = '';
   registerForm!:FormGroup;
-  digitalProfile: TravellerProfile;
 
   constructor(private service: TemplateService, private formBuilder:FormBuilder, public dialog:MatDialog, private rooter:Router) {
     this.Bussiness = {} as BussinessModel;
-    this.digitalProfile = {} as TravellerProfile;
     this.registerForm = this.formBuilder.group({
         first_name: new FormControl('', { validators:  [Validators.required], updateOn: 'change' }),
         last_name: new FormControl('', { validators:  [Validators.required], updateOn: 'change' }),

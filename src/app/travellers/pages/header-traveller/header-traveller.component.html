@@ -1,0 +1,39 @@
+<div class="content">
+
+  <mat-toolbar color="primary" class="toolbar">
+    <div class="left-container">
+      <button class="company-name button-toolbar" [routerLink]="['/travellers/home',UserTraveller.id]" >Tourmates</button>
+    </div>
+
+    <div class="right-container">
+      <div>
+        <button class="options-toolbar button-toolbar" [routerLink]="['/travellers/home',UserTraveller.id]">Home</button>
+      </div>
+      <div>
+        <button class="options-toolbar button-toolbar" [routerLink]="['/travellers/acercade',UserTraveller.id]">acerca-de</button>
+      </div>
+
+      <div >
+        <button class="options-toolbar button-toolbar" [routerLink]="['/travellers/acercade',UserTraveller.id]" >Notificaciones</button>
+      </div>
+      <div >
+        <button class="options-toolbar button-toolbar" [routerLink]="['/travellers/acerca-de',UserTraveller.id]" >Messages</button>
+      </div>
+
+      <div class="menu">
+        <button mat-button [matMenuTriggerFor]="menu" >
+          <mat-icon>account_circle</mat-icon>
+          <mat-label>{{UserTraveller.email}}</mat-label>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item [routerLink]="['/travellers/profile',UserTraveller.id]">Profile</button>
+          <button mat-menu-item>salir</button>
+        </mat-menu>
+      </div>
+
+
+
+    </div>
+
+  </mat-toolbar>
+</div>
