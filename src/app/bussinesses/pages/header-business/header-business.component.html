@@ -9,6 +9,9 @@
       <div>
         <button class="options-toolbar button-toolbar" [routerLink]="['/bussiness/home',UserBussiness.id]">Home</button>
       </div>
+      <div>
+        <button class="options-toolbar button-toolbar" [routerLink]="['/bussiness/plans',UserBussiness.id]">Planes</button>
+      </div>
       <div >
         <button class="options-toolbar button-toolbar" [routerLink]="['/bussiness/acerca-de',UserBussiness.id]" >Notificaciones</button>
       </div>
@@ -23,7 +26,7 @@
       </button>
       <mat-menu #menu="matMenu">
         <button mat-menu-item [routerLink]="['/bussiness/profile',UserBussiness.id]">Profile</button>
-        <button mat-menu-item>salir</button>
+        <button mat-menu-item>Salir</button>
       </mat-menu>
 </div>
 

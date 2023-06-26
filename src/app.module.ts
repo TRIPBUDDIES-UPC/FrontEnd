@@ -67,6 +67,8 @@ import { EditPlacesComponent } from './app/bussinesses/pages/edit-places/edit-pl
 import { HeaderTravellerComponent } from './app/travellers/pages/header-traveller/header-traveller.component';
 import { AcercadeComponent } from './app/travellers/pages/acercade/acercade.component';
 import { ViewPlacesComponent } from './app/travellers/pages/view-places/view-places.component';
+import { PlansComponent } from './app/bussinesses/pages/plans/plans.component';
+import { AddCardDialogComponent } from './app/bussinesses/pages/add-card-dialog/add-card-dialog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,7 +110,9 @@ import { ViewPlacesComponent } from './app/travellers/pages/view-places/view-pla
     EditPlacesComponent,
     HeaderTravellerComponent,
     AcercadeComponent,
-    ViewPlacesComponent
+    ViewPlacesComponent,
+    PlansComponent,
+    AddCardDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -35,6 +35,7 @@ import {AddPlacesComponent} from "./app/bussinesses/pages/add-places/add-places.
 import {EditPlacesComponent} from "./app/bussinesses/pages/edit-places/edit-places.component";
 import {AcercadeComponent} from "./app/travellers/pages/acercade/acercade.component";
 import {ViewPlacesComponent} from "./app/travellers/pages/view-places/view-places.component";
+import { PlansComponent } from './app/bussinesses/pages/plans/plans.component';
 
 const routes: Routes = [
   {path:'', redirectTo: '/login', pathMatch:"full"},
@@ -68,6 +69,7 @@ const routes: Routes = [
       {path: 'places/:id', component: PlacesComponent},
       {path: 'places/add/:id', component: AddPlacesComponent},
       {path: 'places/:id/update/:Updateid', component: EditPlacesComponent},
+      {path: 'plans/:id', component: PlansComponent}
     ],
   },
 
