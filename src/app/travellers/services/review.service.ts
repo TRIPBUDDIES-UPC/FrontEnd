@@ -35,7 +35,11 @@ export class ReviewService {
       .post<Review>(this.base_url, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError))
   }
-
+  getListByPlaceid(id:any): Observable<Review>{
+    return this.http
+      .get<Review>(this.base_url+"?places.id="+id)
+      .pipe(retry(2), catchError(this.handleError))
+  }
   ///* GET */
   getList(): Observable<Review>{
     return this.http

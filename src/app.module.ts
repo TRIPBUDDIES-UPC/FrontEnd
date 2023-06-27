@@ -69,6 +69,7 @@ import { AcercadeComponent } from './app/travellers/pages/acercade/acercade.comp
 import { ViewPlacesComponent } from './app/travellers/pages/view-places/view-places.component';
 import { FavoriteTravellerComponent } from './app/travellers/pages/favorite-traveller/favorite-traveller.component';
 import { AddReviewPlacesComponent } from './app/travellers/pages/add-review-places/add-review-places.component';
+import { ViewReviewsComponent } from './app/bussinesses/pages/view-reviews/view-reviews.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -112,7 +113,8 @@ import { AddReviewPlacesComponent } from './app/travellers/pages/add-review-plac
     AcercadeComponent,
     ViewPlacesComponent,
     FavoriteTravellerComponent,
-    AddReviewPlacesComponent
+    AddReviewPlacesComponent,
+    ViewReviewsComponent
   ],
   imports: [
     BrowserModule,

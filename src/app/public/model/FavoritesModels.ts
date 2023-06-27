@@ -5,6 +5,4 @@ export interface favoritesModels{
 id:number;
   places:places;
 traveller:TravellerModel;
-
-
 }

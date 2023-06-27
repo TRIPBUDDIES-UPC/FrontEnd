@@ -395,49 +395,6 @@
         "id": 1
       },
       "places": {
-        "id": 1,
-        "favorite": false,
-        "name": "Aguitas",
-        "description": "Aguitas termales",
-        "imageUrl": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
-        "price": 50,
-        "location": "Cusco",
-        "country": "Lima",
-        "bussiness": {
-          "firstName": "Edmer",
-          "lastName": "Jimenez",
-          "description": "",
-          "image": "https://pbs.twimg.com/profile_images/1374076420566224899/wSZ6S8vW_400x400.jpg",
-          "bannerImage": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
-          "phone": "498419819",
-          "email": "edmerjimenez@gmail.com",
-          "password": "Edemer@12345",
-          "company_name": "Google",
-          "ruc": 22336123199,
-          "owner": "Mark Sukerber",
-          "address": "The olivos",
-          "city": "Manhatahn",
-          "country": "New Yordk",
-          "role": "Bussiness",
-          "id": 1
-        }
-      },
-      "id": 1
-    },
-    {
-      "traveller": {
-        "first_name": "Pedro",
-        "last_name": "Jimenez",
-        "description": "Loremp ipmsun ",
-        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
-        "adreess": ",Av. Los Incas 123, Lima, Peru",
-        "phone": "498419819",
-        "email": "pedrojiminez@keyido.com",
-        "role": "traveller",
-        "password": "Pedro@123",
-        "id": 1
-      },
-      "places": {
         "id": 4,
         "name": "Plaza norte",
         "favorite": false,
@@ -466,49 +423,6 @@
         }
       },
       "id": 2
-    },
-    {
-      "traveller": {
-        "first_name": "Pedro",
-        "last_name": "Jimenez",
-        "description": "Loremp ipmsun ",
-        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
-        "adreess": ",Av. Los Incas 123, Lima, Peru",
-        "phone": "498419819",
-        "email": "pedrojiminez@keyido.com",
-        "role": "traveller",
-        "password": "Pedro@123",
-        "id": 1
-      },
-      "places": {
-        "name": "Eduardo De Habich",
-        "favorite": false,
-        "description": "cristian",
-        "country": "Peru",
-        "location": "San martin de porres",
-        "price": "21",
-        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0-vbwx9noFxTsSFXVWg_aGzamoVWNH_Gpvcd04GVFL3M1EOfYZf5QZJZ1WouyMDPakQw&usqp=CAU",
-        "bussiness": {
-          "firstName": "Edmer",
-          "lastName": "Jimenez",
-          "description": "ADD DESTINATION",
-          "image": "https://pbs.twimg.com/profile_images/1374076420566224899/wSZ6S8vW_400x400.jpg",
-          "bannerImage": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
-          "phone": "498419819",
-          "email": "edmerjimenez@gmail.com",
-          "password": "Edemer@12345",
-          "company_name": "Google",
-          "ruc": 22336123199,
-          "owner": "Mark Sukerber",
-          "address": "The olivos",
-          "city": "Manhatahn",
-          "country": "New Yordk",
-          "role": "Bussiness",
-          "id": 1
-        },
-        "id": 2
-      },
-      "id": 3
     },
     {
       "places": {
@@ -555,32 +469,32 @@
     },
     {
       "places": {
-        "bussiness": {
-          "firstName": "Alessandro",
-          "lastName": "Velasquez",
-          "description": "",
-          "image": "https://i.pinimg.com/originals/cb/05/f0/cb05f0ca5a29d510201e2c112aa2c0fa.jpg",
-          "bannerImage": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
-          "phone": "984123876",
-          "email": "alessandrovelasquez@gmail.com",
-          "password": "Alessandro@1234",
-          "company_name": "Google",
-          "ruc": 20536161199,
-          "owner": "Julian Coulter",
-          "address": "Av. la Paz 1049",
-          "city": "Miraflores",
-          "country": "Lima",
-          "role": "Bussiness",
-          "id": 2
-        },
-        "name": "REAL PLAZA ",
-        "description": "CENTRO COMERCIAL ",
-        "country": "LIMA",
-        "location": "PERU",
-        "price": "210",
-        "imageUrl": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUUFBcVFBUYGBcaGhoYGxsbGiEdHRsaGhoYGxcaIBobICwkHR0pHhcXJTYlKS4yMzMzGiI5PjkyPSwyMzABCwsLEA4QHhISHjIpJCkyMjI0MjIyMzIyMjIyNDIyMjIyMjQyMjIyMjIyMjI0MjMyMjIyMjQyMjIyMjIyMjIyMv/AABEIAK4BIgMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAAFAAECBAYDB//EAEUQAAIBAgQDBAcEBwcEAgMAAAECEQADBBIhMQVBUQYiYXETMoGRobHBI0JS0QcUFXKCkvAzQ1NiorLhFmPS8STTNIPC/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EADIRAAICAQMDAgMGBgMAAAAAAAABAhEDEiExBEFRYZETFCIFFXGBobEyUsHR4fBCU/H/2gAMAwEAAhEDEQA/APWxUqgKz/be5GHEGO8Nj0/90wStpGkpVhuAcXxIXvMLi8g2unTPOYHzBFaLh3aCzdOSSlyYyt12gEaGkmmU4PlBalTmmpkCpUqVAD0qVKgBU4pqegBCnpqekMlSphT0AKlSpUAKminpUCIxTRU6VMCFKpRSigCNKpRTRQA1NTxSoAaKUUq4X8SqkLIzHYc4G5jpE60Ak2dopop6gX6a/L30AI1AtTlSdz7BSiKYECCf+Pzpso2qRpjQA3spUqVAHasr2+uRbtjqx+laoVj+3WJKNaiNjuJ3n8hSfBpjTclXkzPCMQVGUFtM3qmTGhHdII8JFE+BLmxg1J70zEbETp76BW70IqiVyk95TBIYywiIJ291aXsuFbFgqNIn4GdAdNRWa/iN5QlBO0egGo08001ocgqVKaU0APTTSmquPuEJC+sxyj27n2CT7KBpWWpp5rmDVfE8Qt2/XuKvgTr7t6BFyaeazuI7U2l9QM+vSB8dfhRLAcUt3fUbXmp0YeY+u",
+        "id": 1,
         "favorite": false,
-        "id": 6
+        "name": "Aguitas",
+        "description": "Aguitas termales",
+        "imageUrl": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
+        "price": 50,
+        "location": "Cusco",
+        "country": "Lima",
+        "bussiness": {
+          "firstName": "Edmer",
+          "lastName": "Jimenez",
+          "description": "",
+          "image": "https://pbs.twimg.com/profile_images/1374076420566224899/wSZ6S8vW_400x400.jpg",
+          "bannerImage": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
+          "phone": "498419819",
+          "email": "edmerjimenez@gmail.com",
+          "password": "Edemer@12345",
+          "company_name": "Google",
+          "ruc": 22336123199,
+          "owner": "Mark Sukerber",
+          "address": "The olivos",
+          "city": "Manhatahn",
+          "country": "New Yordk",
+          "role": "Bussiness",
+          "id": 1
+        }
       },
       "traveller": {
         "first_name": "Pedro",
@@ -607,7 +521,7 @@
       "phone": "963246637",
       "email": "edmerjimenez@gmail.com",
       "password": "Edemer@12345",
-      "company_name": "Google",
+      "name": "Google",
       "ruc": 22336123199,
       "owner": "Mark Sukerber",
       "address": "The olivos",
@@ -625,7 +539,7 @@
       "phone": "984123876",
       "email": "alessandrovelasquez@gmail.com",
       "password": "Alessandro@1234",
-      "company_name": "Google",
+      "name": "Google",
       "ruc": 20536161199,
       "owner": "Julian Coulter",
       "address": "Av. la Paz 1049",
@@ -642,7 +556,7 @@
       "phone": "980765438",
       "email": "pablocontreras@gmail.com",
       "password": "pablo1234",
-      "company_name": "AppliSys",
+      "name": "AppliSys",
       "ruc": 20100717558,
       "owner": "Adams Jibrin",
       "address": "Isaac Albeniz 106",
@@ -804,6 +718,138 @@
       },
       "reviewText": "Review New",
       "id": 3
+    },
+    {
+      "traveller": {
+        "first_name": "Pedro",
+        "last_name": "Jimenez",
+        "description": "Loremp ipmsun ",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "adreess": ",Av. Los Incas 123, Lima, Peru",
+        "phone": "498419819",
+        "email": "pedrojiminez@keyido.com",
+        "role": "traveller",
+        "password": "Pedro@123",
+        "id": 1
+      },
+      "places": {
+        "name": "Eduardo De Habich",
+        "favorite": false,
+        "description": "cristian",
+        "country": "Peru",
+        "location": "San martin de porres",
+        "price": "21",
+        "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0-vbwx9noFxTsSFXVWg_aGzamoVWNH_Gpvcd04GVFL3M1EOfYZf5QZJZ1WouyMDPakQw&usqp=CAU",
+        "bussiness": {
+          "firstName": "Edmer",
+          "lastName": "Jimenez",
+          "description": "ADD DESTINATION",
+          "image": "https://pbs.twimg.com/profile_images/1374076420566224899/wSZ6S8vW_400x400.jpg",
+          "bannerImage": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
+          "phone": "498419819",
+          "email": "edmerjimenez@gmail.com",
+          "password": "Edemer@12345",
+          "company_name": "Google",
+          "ruc": 22336123199,
+          "owner": "Mark Sukerber",
+          "address": "The olivos",
+          "city": "Manhatahn",
+          "country": "New Yordk",
+          "role": "Bussiness",
+          "id": 1
+        },
+        "id": 2
+      },
+      "reviewText": "EduardoDehabich",
+      "id": 4
+    },
+    {
+      "traveller": {
+        "first_name": "Pedro",
+        "last_name": "Jimenez",
+        "description": "Loremp ipmsun ",
+        "image": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXZhdGFyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "adreess": ",Av. Los Incas 123, Lima, Peru",
+        "phone": "498419819",
+        "email": "pedrojiminez@keyido.com",
+        "role": "traveller",
+        "password": "Pedro@123",
+        "id": 1
+      },
+      "places": {
+        "id": 1,
+        "favorite": false,
+        "name": "Aguitas",
+        "description": "Aguitas termales",
+        "imageUrl": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
+        "price": 50,
+        "location": "Cusco",
+        "country": "Lima",
+        "bussiness": {
+          "firstName": "Edmer",
+          "lastName": "Jimenez",
+          "description": "",
+          "image": "https://pbs.twimg.com/profile_images/1374076420566224899/wSZ6S8vW_400x400.jpg",
+          "bannerImage": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
+          "phone": "498419819",
+          "email": "edmerjimenez@gmail.com",
+          "password": "Edemer@12345",
+          "company_name": "Google",
+          "ruc": 22336123199,
+          "owner": "Mark Sukerber",
+          "address": "The olivos",
+          "city": "Manhatahn",
+          "country": "New Yordk",
+          "role": "Bussiness",
+          "id": 1
+        }
+      },
+      "reviewText": "Add Review AGUITA TERMALES",
+      "id": 5
+    },
+    {
+      "traveller": {
+        "first_name": "Matthew",
+        "last_name": "Aleva",
+        "description": " ",
+        "image": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&w=1000&q=80",
+        "adreess": "Av. Los Incas 123, Lima, Peru",
+        "phone": "498419819",
+        "email": "matthewaleva@gmail.com",
+        "password": "Matthew@123",
+        "role": "traveller",
+        "id": 2
+      },
+      "places": {
+        "id": 1,
+        "favorite": false,
+        "name": "Aguitas",
+        "description": "Aguitas termales",
+        "imageUrl": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
+        "price": 50,
+        "location": "Cusco",
+        "country": "Lima",
+        "bussiness": {
+          "firstName": "Edmer",
+          "lastName": "Jimenez",
+          "description": "",
+          "image": "https://pbs.twimg.com/profile_images/1374076420566224899/wSZ6S8vW_400x400.jpg",
+          "bannerImage": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2019/04/18135755/pilot.jean-.jpg",
+          "phone": "498419819",
+          "email": "edmerjimenez@gmail.com",
+          "password": "Edemer@12345",
+          "company_name": "Google",
+          "ruc": 22336123199,
+          "owner": "Mark Sukerber",
+          "address": "The olivos",
+          "city": "Manhatahn",
+          "country": "New Yordk",
+          "role": "Bussiness",
+          "id": 1
+        }
+      },
+      "reviewText": "Review new Mathew",
+      "id": 6
     }
   ]
 }

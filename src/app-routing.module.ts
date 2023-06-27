@@ -37,6 +37,7 @@ import {AcercadeComponent} from "./app/travellers/pages/acercade/acercade.compon
 import {ViewPlacesComponent} from "./app/travellers/pages/view-places/view-places.component";
 import {FavoriteTravellerComponent} from "./app/travellers/pages/favorite-traveller/favorite-traveller.component";
 import {AddReviewPlacesComponent} from "./app/travellers/pages/add-review-places/add-review-places.component";
+import {ViewReviewsComponent} from "./app/bussinesses/pages/view-reviews/view-reviews.component";
 
 const routes: Routes = [
   {path:'', redirectTo: '/login', pathMatch:"full"},
@@ -72,6 +73,8 @@ const routes: Routes = [
       {path: 'places/:id', component: PlacesComponent},
       {path: 'places/add/:id', component: AddPlacesComponent},
       {path: 'places/:id/update/:Updateid', component: EditPlacesComponent},
+      {path: 'places/:userid/reviews/:id', component: ViewReviewsComponent},
+
     ],
   },
 

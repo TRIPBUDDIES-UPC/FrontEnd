@@ -34,7 +34,7 @@ export class PlacesComponent implements OnInit{
   PlaceRow!:places;
   User:BussinessModel;
   dataSource=new MatTableDataSource();
-  displayedColumns:string[]=['id','name','description','location','country','price','imagenurl','actions'];
+  displayedColumns:string[]=['id','name','description','location','country','price','imagenurl','actions','Reviews'];
 
   @ViewChild(MatPaginator,{static:true})
   paginator!: MatPaginator;
@@ -67,7 +67,9 @@ export class PlacesComponent implements OnInit{
     });
   }
 
+  ViewReview(element:any){
 
+  }
   delete(id:any){
     this.HttpDataServices.deleteItem(id).subscribe();
   }
