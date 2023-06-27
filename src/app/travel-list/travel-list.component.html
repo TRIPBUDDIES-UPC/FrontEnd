@@ -7,31 +7,25 @@
     <mat-card-actions>
         <mat-card-title style="padding:10px; font-size:14px">Seleccione su distrito:</mat-card-title>
           <mat-form-field>
-            <select matNativeControl required>
-              <option value="" disabled selected>Seleccione una opción</option>
-              <option value="barranco">Barranco</option>
-              <option value="surquillo">Surquillo</option>
-              <option value="lince">Lince</option>
-              <option value="magdalena">Magdalena</option>
-              <option value="san-isidro">San Isidro</option>
-              <option value="miraflores">Miraflores</option>
-              <option value="san-borja">San Borja</option>
-              <option value="san-miguel">San Luis</option>
-              <option value="la-molina">La Molina</option>
-            </select>
+            <mat-label>Distrito</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let district of districts" [value]="district.value">
+                {{district.viewValue}}
+              </mat-option>
+            </mat-select>
           </mat-form-field>
       </mat-card-actions>
     <mat-card-actions>
       <mat-card-title style="padding:10px; font-size:14px">Seleccione su preferencia:</mat-card-title>
-      <mat-form-field>
-        <select matNativeControl required>
-          <option value="" disabled selected>Seleccione una opción</option>
-          <option value="trekking">Treking</option>
-          <option value="cannoping">Cannoping</option>
-          <option value="playa">Playa</option>
-          <option value="sitios-turísticos">Sitios turísticos</option>
-        </select>
-      </mat-form-field>
+        <mat-form-field>
+          <mat-label>Preferencias</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let preference of preferences" [value]="preference.value">
+              {{preference.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
 
       <mat-divider></mat-divider>
     </mat-card-actions>
