@@ -18,8 +18,7 @@ import {Router} from "@angular/router";
 
 
 export class PlacesComponent implements OnInit{
-  @ViewChild(MatTable)
-  table!: MatTable<any>;
+
 
   UserId:any;
   constructor(private router: Router,private HttpDataServices:BussinnessPlacesService,private BussinessService:BussinessServicesService) {
@@ -27,10 +26,7 @@ export class PlacesComponent implements OnInit{
     this.User={} as BussinessModel;
   }
   ngOnInit(): void {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
     this.UserId = Number(localStorage.getItem('id'));
-    this.getAllPlacesbyBussiness(this.UserId);
     this.getUserBussiness(this.UserId);
   }
   PlacesData:places;
@@ -61,12 +57,13 @@ export class PlacesComponent implements OnInit{
   getUserBussiness(id:any){
     this.BussinessService.getItem(id).subscribe((response:any)=>{
       this.User=response;
-    })
+      console.log(this.User)
+      this.getAllPlacesbyBussiness(this.User.id);
+    });
   }
-  getAllPlacesbyBussiness(Bussinessid:number){
-    this.HttpDataServices.getItemByBussiness(Bussinessid).subscribe((response: any) =>{
+  getAllPlacesbyBussiness(bussinessid:number){
+    this.HttpDataServices.getItemByBussiness(bussinessid).subscribe((response: any) =>{
       this.dataSource.data = response;
-      console.log(this.dataSource.data)
     });
   }
 

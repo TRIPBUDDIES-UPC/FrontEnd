@@ -45,23 +45,21 @@ export class BussinnessPlacesService {
       .pipe(retry(2), catchError(this.handleError))
   }
 
+
+
+
   getItem(id: any): Observable<places>{
     return this.http
       .get<places>(this.base_url + '/' + id)
       .pipe(retry(2), catchError(this.handleError))
   }
-  getItemByBussiness(BussinessId: any): Observable<places> {
-    return this.http.get<places>(this.base_url + '/?BussinessId=' + BussinessId)
+  getItemByBussiness(bussinessid: any): Observable<places> {
+    return this.http.get<places>(this.base_url + '?bussiness.id=' + bussinessid)
       .pipe(
         retry(2),
         catchError(this.handleError)
       );
   }
-
-
-
-
-
   /* update. usa el put: actualiza datos*/
   updateItem(id: any, item: any): Observable<places>{
     return this.http /* se actualiza el item en formato JSON en la url dada */

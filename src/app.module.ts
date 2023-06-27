@@ -67,6 +67,8 @@ import { EditPlacesComponent } from './app/bussinesses/pages/edit-places/edit-pl
 import { HeaderTravellerComponent } from './app/travellers/pages/header-traveller/header-traveller.component';
 import { AcercadeComponent } from './app/travellers/pages/acercade/acercade.component';
 import { ViewPlacesComponent } from './app/travellers/pages/view-places/view-places.component';
+import { FavoriteTravellerComponent } from './app/travellers/pages/favorite-traveller/favorite-traveller.component';
+import { AddReviewPlacesComponent } from './app/travellers/pages/add-review-places/add-review-places.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -108,7 +110,9 @@ import { ViewPlacesComponent } from './app/travellers/pages/view-places/view-pla
     EditPlacesComponent,
     HeaderTravellerComponent,
     AcercadeComponent,
-    ViewPlacesComponent
+    ViewPlacesComponent,
+    FavoriteTravellerComponent,
+    AddReviewPlacesComponent
   ],
   imports: [
     BrowserModule,

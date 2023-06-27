@@ -8,7 +8,7 @@ import {ActivatedRoute} from "@angular/router";
   providedIn: 'root'
 })
 export class BussinessServicesService {
-  base_url="http://localhost:3000/companies"
+  base_url="http://localhost:3000/bussiness"
   constructor(private http:HttpClient, private route: ActivatedRoute) {
   }
   httpOptions={

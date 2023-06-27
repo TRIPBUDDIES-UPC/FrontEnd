@@ -7,6 +7,7 @@ import {MatTableDataSource} from "@angular/material/table";
 import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {NgForm} from "@angular/forms";
+import {PlacesComponent} from "../places/places.component";
 
 @Component({
   selector: 'app-add-places',
@@ -25,7 +26,6 @@ export class AddPlacesComponent {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
     this.UserId = Number(localStorage.getItem('id'));
-    this.getAllPlacesbyBussiness(this.UserId);
     this.getUserBussiness(this.UserId);
   }
   PlacesData:places;
@@ -41,15 +41,23 @@ export class AddPlacesComponent {
   getUserBussiness(id:any){
     this.BussinessService.getItem(id).subscribe((response:any)=>{
       this.User=response;
-      console.log(this.User);
+      this.PlacesData.bussiness=this.User;
     })
   }
-  getAllPlacesbyBussiness(Bussinessid:any){
-    this.HttpDataServices.getItemByBussiness(Bussinessid).subscribe((response: any) =>{
-      this.dataSource.data = response;
-      console.log(this.dataSource.data)
-    });
+
+postplace(PlacesData:any)
+{
+  PlacesData.favorite=false;
+  this.HttpDataServices.createItem(PlacesData).subscribe((response: any) =>{
+  })
   }
+
+  getplacesbyId(id:number){
+    this.HttpDataServices.getItem(id).subscribe((response: any) =>{
+      this.PlacesData=response;
+  })
+  }
+
   getAllPlaces(){
     this.HttpDataServices.getList().subscribe((response: any) =>{
       this.dataSource.data = response;
@@ -68,8 +76,6 @@ export class AddPlacesComponent {
   }
 
   add(){
-    this.PlacesData.BussinessId=this.UserId;
-    this.HttpDataServices.createItem(this.PlacesData).subscribe((response: any) =>{
-    });
+    this.postplace(this.PlacesData);
   }
 }

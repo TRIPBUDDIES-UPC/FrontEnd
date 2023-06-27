@@ -23,6 +23,7 @@ export class HeaderTravellerComponent implements OnInit {
     this.UserId = Number(localStorage.getItem('id'));
     console.log(this.UserId)
     this.Getravellersbyid(this.UserId);
+    console.log(this.UserTraveller)
   }
 
   Getravellersbyid(id: Number) {

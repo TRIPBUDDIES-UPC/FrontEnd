@@ -14,5 +14,6 @@ export interface BussinessModel{
   password: string,
   phone: string,
   role: string,
-  ruc: string
+  ruc: number
+  company_name:string
 }

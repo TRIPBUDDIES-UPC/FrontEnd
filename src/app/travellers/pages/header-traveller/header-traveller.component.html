@@ -27,7 +27,7 @@
         </button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item [routerLink]="['/travellers/profile',UserTraveller.id]">Profile</button>
-          <button mat-menu-item>salir</button>
+          <button mat-menu-item [routerLink]="['/login']">salir</button>
         </mat-menu>
       </div>
 

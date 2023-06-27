@@ -1,9 +1,10 @@
 import {places} from "./places";
 import {TravellerModel} from "./TravellerModel";
 
-export interface favorites{
+export interface favoritesModels{
 id:number;
-PlacesId:places;
-travellerId:TravellerModel;
+  places:places;
+traveller:TravellerModel;
+
 
 }

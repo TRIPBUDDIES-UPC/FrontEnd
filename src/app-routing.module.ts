@@ -35,6 +35,8 @@ import {AddPlacesComponent} from "./app/bussinesses/pages/add-places/add-places.
 import {EditPlacesComponent} from "./app/bussinesses/pages/edit-places/edit-places.component";
 import {AcercadeComponent} from "./app/travellers/pages/acercade/acercade.component";
 import {ViewPlacesComponent} from "./app/travellers/pages/view-places/view-places.component";
+import {FavoriteTravellerComponent} from "./app/travellers/pages/favorite-traveller/favorite-traveller.component";
+import {AddReviewPlacesComponent} from "./app/travellers/pages/add-review-places/add-review-places.component";
 
 const routes: Routes = [
   {path:'', redirectTo: '/login', pathMatch:"full"},
@@ -54,6 +56,8 @@ const routes: Routes = [
          { path: 'settings', component: SettingsTravellerComponent },
          {path: 'notifications', component: NotificationTravellerComponent},
       {path: 'views/places/:id', component: ViewPlacesComponent},
+      {path: 'views/favorites/:id', component: FavoriteTravellerComponent},
+      {path: 'reviews/:id/places/:Placesid', component: AddReviewPlacesComponent},
 
     ],
   },
@@ -77,6 +81,7 @@ const routes: Routes = [
   {path: 'destinations/:id', component: DestinationsTableComponent},
   {path: 'destinations/:id/reviews', component: DestinationsReviewsComponent},
   {path: 'acerca-de/:id', component: AcercaDeComponent},
+  {path: 'profile/:id', component: ProfileUsersComponent},
   {path: 'profile/:id', component: ProfileUsersComponent},
   { path: '**', component: PageNotfoundComponent },
 

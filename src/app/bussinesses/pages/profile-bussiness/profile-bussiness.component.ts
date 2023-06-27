@@ -10,10 +10,7 @@ import {BussinessServicesService} from "../../services/bussiness-services.servic
   styleUrls: ['./profile-bussiness.component.css']
 })
 export class ProfileBussinessComponent {
-
-  mostrarCard = false;
-
-  UserBussiness : BussinessModel;
+  UserBussiness! : BussinessModel;
   id: any;
   UserId:any;
 
@@ -23,7 +20,6 @@ export class ProfileBussinessComponent {
 
   ngOnInit(): void {
     this.UserId = Number(localStorage.getItem('id'));
-    console.log(this.UserId);
     this.getBussinessByID(this.UserId);
   }
 

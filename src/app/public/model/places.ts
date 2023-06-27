@@ -1,10 +1,14 @@
- export interface places{
+import {BussinessModel} from "./BussinessModel";
+
+export interface places{
 id: number,
 description: string;
 name:string;
 price:number;
-imagenurl:string;
+  imageUrl:string;
 location:string;
 country:string;
-   BussinessId:number;
+
+favorite:boolean;
+  bussiness:BussinessModel;
 }

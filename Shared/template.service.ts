@@ -12,7 +12,7 @@ import {TravellerModel} from "../src/app/public/model/TravellerModel";
 export class TemplateService {
 
   basePath = 'http://localhost:3000/travellers'
-  urlBussiness = "http://localhost:3000/companies"
+  urlBussiness = "http://localhost:3000/bussiness"
   urlTraveller = "http://localhost:3000/travellers"
   httpOptions = {
     headers: new HttpHeaders({
