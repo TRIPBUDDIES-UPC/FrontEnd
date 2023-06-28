@@ -28,7 +28,7 @@
       </mat-form-field>
       <mat-form-field appearance="fill"> <!-- placeholder: lo que se pondrá de titulo -->
         <mat-label>imagenurl</mat-label>
-        <input type="text" matInput placeholder="price" name="imagenurl" required [(ngModel)]="PlacesData.imageUrl">
+        <input type="text" matInput placeholder="image" name="imagenurl" required [(ngModel)]="PlacesData.imageUrl">
       </mat-form-field>
 
       <button mat-button class="edit" [routerLink]="['/bussiness/places',User.id]" (click)="add()">Add</button> &nbsp;
