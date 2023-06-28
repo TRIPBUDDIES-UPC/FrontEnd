@@ -46,6 +46,11 @@ export class ServiceService {
   PostPlaces(places:Places,id:number){
     return this.http.post<Places>(`${this.placesURL}/${id}`,places ,this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }
+
+  GetReviewPlaceId(id: number): Observable<any>{
+    return this.http.get<any>(`${this.ReviewPlacesURL}/${id}`, this.httpOptions).pipe(retry(2), catchError(this.handleError));
+  }
+
   GetPlaceByid(id:number){
     return this.http.get<any>(`${this.placesURL}/${id}`, this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }

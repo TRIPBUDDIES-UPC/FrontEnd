@@ -34,10 +34,17 @@ export class HomeBussinessComponent implements OnInit{
   PlacesData:Places;
   @ViewChild('editDialog') editDialog!: TemplateRef<any>;
 
+  @ViewChild('reviewDialog') reviewDialog!: TemplateRef<any>;
+
+
+
   PlaceRow!:Places;
   User:BussinessComponent;
   dataSource=new MatTableDataSource();
-  displayedColumns:string[]=['id','name','description','location','country','price','imagenurl','actions'];
+  dataSourceReview=new MatTableDataSource();
+  displayedColumns:string[]=['id','name','description','location','country','price','imagenurl','actions','reviews'];
+  displayedColumnsReview:string[]=['FirstName','LastName','PlaceName','imagenurl','Reviews'];
+
 
   UpdateButton(element: any) {
     this.PlaceRow=element;
@@ -47,8 +54,18 @@ export class HomeBussinessComponent implements OnInit{
     this.PlaceRow=element;
     this.HttpDataServices.DeletePlace(element.id).subscribe();
     this.getAllPlacesbyBussiness(this.UserId);
+  }
+
+  OpenReviewsDialog(element:any){
+    this.HttpDataServices.GetReviewPlaceId(element.id).subscribe((response:any)=>{
+      console.log(response);
+      this.dataSourceReview.data=response;
+    })
+    this.dialog.open(this.reviewDialog);
 
   }
+
+
   openEditDialog(element:any){
   this.HttpDataServices.GetPlaceByid(element.id).subscribe((response:any)=>{
       this.PlacesData=response;
