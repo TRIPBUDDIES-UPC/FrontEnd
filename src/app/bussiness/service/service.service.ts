@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {catchError, Observable, retry, throwError} from "rxjs";
 import {BussinessComponent} from "../model/bussiness";
 import {Places} from "../model/places";
+import {Bussiness} from "../../public/register/model/bussiness";
 
 @Injectable({
   providedIn: 'root'
@@ -41,6 +42,12 @@ export class ServiceService {
   }
   GetPlaceByBussinessId(id: number): Observable<any>{
     return this.http.get<any>(`${this.PlaceByBussinessID}/${id}`, this.httpOptions).pipe(retry(2), catchError(this.handleError));
+  }
+  PostPlaces(places:Places,id:number){
+    return this.http.post<Places>(`${this.placesURL}/${id}`,places ,this.httpOptions).pipe(retry(2), catchError(this.handleError));
+  }
+  GetPlaceByid(id:number){
+    return this.http.get<any>(`${this.placesURL}/${id}`, this.httpOptions).pipe(retry(2), catchError(this.handleError));
   }
   UpdateBussiness(bussiness: BussinessComponent): Observable<BussinessComponent>{
     return this.http.put<BussinessComponent>(`${this.baseURL}/${bussiness.id}`, JSON.stringify(bussiness), this.httpOptions).pipe(retry(2), catchError(this.handleError));

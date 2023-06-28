@@ -24,6 +24,7 @@ import {MessagesBussinessComponent} from "./bussiness/pages/messages-bussiness/m
 import {PlansBussinessComponent} from "./bussiness/pages/plans-bussiness/plans-bussiness.component";
 import {ProfileBussinessComponent} from "./bussiness/pages/profile-bussiness/profile-bussiness.component";
 import {BusinessComponent} from "./bussiness/pages/business/business.component";
+import {AddPlaceBussinessComponent} from "./bussiness/pages/add-place-bussiness/add-place-bussiness.component";
 
 const routes: Routes = [
   {path:'', component:LoginComponent},
@@ -52,7 +53,9 @@ const routes: Routes = [
         { path: 'messages', component: MessagesBussinessComponent },
       {path: 'plans', component: PlansBussinessComponent},
       {path:  'profile', component: ProfileBussinessComponent},
-      ]
+      {path:  'home/AddPlaces', component: AddPlaceBussinessComponent}
+
+    ]
   },
   { path: '**', component: PageNotfoundComponent },
 

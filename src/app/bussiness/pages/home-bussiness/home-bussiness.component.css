@@ -11,6 +11,10 @@ table{
   width: 100%;
 }
 
+.table-image{
+  width: 100px;
+  height: 100px;
+}
 .ContentHeader {
   display: flex;
   flex-direction: column;

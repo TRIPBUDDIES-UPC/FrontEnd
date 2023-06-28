@@ -20,32 +20,24 @@ import {MatSort} from "@angular/material/sort";
   styleUrls: ['./home-bussiness.component.css']
 })
 export class HomeBussinessComponent implements OnInit{
-  @ViewChild(MatTable)
-  table!: MatTable<any>;
-
   UserId:any;
-  constructor(private router: Router,private HttpDataServices:ServiceService,private BussinessService:ServiceService) {
+  constructor(private dialog: MatDialog,private router: Router,private HttpDataServices:ServiceService,private BussinessService:ServiceService) {
     this.PlacesData={} as Places;
     this.User={} as BussinessComponent;
   }
   ngOnInit(): void {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
     this.UserId = Number(localStorage.getItem('id'));
+    console.log(this.UserId)
     this.getAllPlacesbyBussiness(this.UserId);
     this.getUserBussiness(this.UserId);
   }
   PlacesData:Places;
+  @ViewChild('editDialog') editDialog!: TemplateRef<any>;
 
   PlaceRow!:Places;
   User:BussinessComponent;
   dataSource=new MatTableDataSource();
   displayedColumns:string[]=['id','name','description','location','country','price','imagenurl','actions'];
-
-  @ViewChild(MatPaginator,{static:true})
-  paginator!: MatPaginator;
-  @ViewChild(MatSort)
-  sort!:MatSort;
 
   UpdateButton(element: any) {
     this.PlaceRow=element;
@@ -57,16 +49,34 @@ export class HomeBussinessComponent implements OnInit{
     this.getAllPlacesbyBussiness(this.UserId);
 
   }
+  openEditDialog(element:any){
+  this.HttpDataServices.GetPlaceByid(element.id).subscribe((response:any)=>{
+      this.PlacesData=response;
+    });
+
+    this.dialog.open(this.editDialog);
+  }
+  saveChanges(){
+    this.HttpDataServices.UpdatePlace(this.PlacesData).subscribe((response: any ) => {console.log(response);
+    });
+    this.dialog.closeAll();
+  }
+
+  closeEditDialog(){
+    this.dialog.closeAll();
+
+  }
 
   getUserBussiness(id:any){
-    this.BussinessService.GetBussinessById(id).subscribe((response:any)=>{
-      this.User=response;
+    this.BussinessService.GetBussinessById(id).subscribe((response) => {
+      this.User = response;
     })
   }
+
+
   getAllPlacesbyBussiness(Bussinessid:number){
     this.HttpDataServices.GetPlaceByBussinessId(Bussinessid).subscribe((response: any) =>{
       this.dataSource.data = response;
-      console.log(this.dataSource.data)
     });
   }
 
