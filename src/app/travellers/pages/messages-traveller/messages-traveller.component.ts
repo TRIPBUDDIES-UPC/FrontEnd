@@ -19,6 +19,7 @@ export class MessagesTravellerComponent implements OnInit {
   contactDescription: string = 'Contact Description';
   contactId: number = 0;
   contactPhoto: string = 'https://d500.epimg.net/cincodias/imagenes/2016/07/04/lifestyle/1467646262_522853_1467646344_noticia_normal.jpg';
+  isUserMessage: boolean = false;
 
   constructor(
     private service: TravellerService,
@@ -69,7 +70,7 @@ export class MessagesTravellerComponent implements OnInit {
       .subscribe((response: any) => {
         this.messages.push(response);
       });
-
+    this.isUserMessage = true;
     this.answer = '';
   }
 }

@@ -41,7 +41,26 @@ export class MessageDialogComponent implements OnInit {
     });
 
     this.answer = "";
-
+    this.sendNotification(data);
     this.dialogRef.close(data);
+  }
+  sendNotification(data: any) {
+    let TempAnswer: object = {
+      "id": 0,
+      "content": "This user did match with you!",
+      "date": "2022-11-19T19:53:42.582Z",
+      "emitter": {
+        "id": this.UserId
+      },
+      "receiver": {
+        "id": data
+      }
+    };
+
+    this.service.SendNotification(TempAnswer, data, this.UserId).subscribe(response => {
+      console.log(response);
+    });
+
+    this.answer = "";
   }
 }

@@ -12,6 +12,8 @@ import {
   NotificationDialogComponent
 } from "../../../bussiness/pages/home-bussiness/notification-dialog/notification-dialog.component";
 import {Favorite} from "../../models/favorite";
+import {MatPaginator} from "@angular/material/paginator";
+import {MatTableDataSource} from "@angular/material/table";
 
 @Component({
   selector: 'app-places-search',
@@ -31,7 +33,12 @@ export class PlacesSearchComponent implements OnInit {
   users : Traveller;
   UserId: number = 0;
   favorite: Favorite;
+  UserId2: number=0;
   placeId: any; // Cambiado el nombre a PlaceId en lugar de PlaceID
+  // Opciones del paginador
+  @ViewChild(MatPaginator, {static:true}) paginator!: MatPaginator;
+
+
   @ViewChild('editDialog') editDialog!: TemplateRef<any>;
   @ViewChild('addReview') addReview!: TemplateRef<any>;
   @ViewChild('placesAll') placesAll!: TemplateRef<any>;
@@ -56,6 +63,7 @@ export class PlacesSearchComponent implements OnInit {
   ngOnInit(): void {
     const id = toInteger(localStorage.getItem("id"));
     this.UserId = id;
+    this.UserId2 = id
     this.route.params.subscribe(params => {
       this.placeId = +params['placesid']; // El "+" convierte el parámetro en un número
     });
@@ -93,12 +101,15 @@ export class PlacesSearchComponent implements OnInit {
     this.loadReviews(id);
   }
   SendMessageToBussines(id:any){
-
+    this.dialog.open(MessageDialogComponent, {
+      data: id,
+    });
   }
   addToFavorites(id: number) {
     this.placeService.GetPlacesById(id).subscribe(
       (response: any) => {
         this.favorite.places_Id = response;
+        console.log(this.favorite.places_Id.id);
         console.log(response);
       }
     );
@@ -106,16 +117,18 @@ export class PlacesSearchComponent implements OnInit {
       (response: any) => {
         this.favorite.traveller_Id = response;
         console.log(response);
+        console.log(this.favorite.traveller_Id.id);
+        console.log(this.favorite)
       }
     );
-    this.placeService.AddFavorite(this.UserId,this.favorite).subscribe(
+    this.placeService.AddFavorite(this.UserId2,this.favorite).subscribe(
       (response:any)=> {
-      this.favorite = response
-      console.log(response);
-      console.log("Agregado a favoritos")
-    },
+        this.favorite = response
+        console.log(response);
+        console.log("Agregado a favoritos")
+      },
       error => {
-      console.error('Error al agregar a favoritos:', error)
+        console.error('Error al agregar a favoritos:', error)
       });
   }
   deleteFavorite(id:any){

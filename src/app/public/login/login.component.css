@@ -1,3 +1,10 @@
+.container {
+  background-image: url("https://th.bing.com/th/id/R.e8aa0d6d79b90cc8749ad89d260c196c?rik=VHv7gmN5vSK4aQ&pid=ImgRaw&r=0");
+  background-size: cover;
+  min-height: 100vh; /* Set a minimum height to cover the entire viewport */
+}
+
+
 .form-container{
   box-sizing: border-box;
   position: absolute;

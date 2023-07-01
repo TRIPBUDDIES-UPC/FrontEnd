@@ -54,7 +54,7 @@
         <div *ngIf="message.emitter.role === 'bussiness'" class="bubble1">
           <p>{{message.message}}</p>
         </div>
-        <div *ngIf="message.emitter.role === 'traveller'" class="bubble2">
+        <div *ngIf="message.emitter.role === 'traveller'" class="bubble2" [ngClass]="{'user-message': isUserMessage}">
           <p>{{message.message}}</p>
         </div>
       </div>
@@ -87,7 +87,7 @@
         <div *ngIf="message.emitter.role === 'bussiness'" class="bubble1">
           <p>{{message.message}}</p>
         </div>
-        <div *ngIf="message.emitter.role === 'traveller'" class="bubble2">
+        <div *ngIf="message.emitter.role === 'traveller'" class="bubble2" [ngClass]="{'user-message': isUserMessage}">
           <p>{{message.message}}</p>
         </div>
       </div>

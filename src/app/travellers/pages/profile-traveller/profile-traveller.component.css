@@ -4,7 +4,14 @@ html {
   text-size-adjust: 100%;
   line-height: 1.4;
 }
-
+.container{
+  background-image: url("/../../../../assets/images/3d7d4e06-13d6-4801-ad66-c4b44d961691.jpg");
+  background-color: rgba(242, 181, 107, 0.3);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +48,6 @@ body {
   border-radius: 0 0 20px 20px;
   width: 90%;
   height: 17rem;
-  background-image: url("https://static.hosteltur.com/app/public/uploads/img/posts/2016/06/01/L_5b146a953d5bb_B_f296dc175e38fa8bf76d770daa82d995.jpg");
 }
 
 .seccion-perfil-usuario .perfil-usuario-portada img {
@@ -56,7 +62,7 @@ body {
   position: relative;
   border-radius: 10px;
   margin-top: 20px;
-  color: royalblue;
+  color: #3498db;
   box-shadow: 0 0 12px rgba(0, 0, 0, .2);
 }
 
@@ -66,8 +72,8 @@ body {
   height: 180px;
   align-items: center;
   justify-content: center;
-  border: 7px solid #FFFFFF;
-  background-color: #DFE5F2;
+  border: 7px solid #ffffff;
+  background-color: #f2d479;
   border-radius: 50%;
   box-shadow: 0 0 12px rgba(0, 0, 0, .2);
   position: absolute;
@@ -113,7 +119,7 @@ mat-label {
   flex-wrap: wrap;
   padding: 1.5rem 2rem;
   box-shadow: 0 0 12px rgba(0, 0, 0, .2);
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 15px;
   width: 100%;
 }
@@ -148,7 +154,7 @@ mat-label {
 
 .seccion-perfil-usuario .redes-sociales .boton-redes {
   border: 0;
-  background-color: #fff;
+  background-color: #ffffff;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -156,7 +162,7 @@ mat-label {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  color: #fff;
+  color: #ffffff;
   box-shadow: 0 0 12px rgba(0, 0, 0, .2);
   font-size: 1.3rem;
 }
@@ -166,15 +172,15 @@ mat-label {
 }
 
 .seccion-perfil-usuario .boton-redes.facebook {
-  background-color: #5955FF;
+  background-color: #3b5998;
 }
 
 .seccion-perfil-usuario .boton-redes.twitter {
-  background-color: #35E1BF;
+  background-color: #1da1f2;
 }
 
 .seccion-perfil-usuario .boton-redes.instagram {
-  background: linear-gradient(45deg, #FF2DFD, #40A7FF);
+  background: linear-gradient(45deg, #F2b56b, #F2d479);
 }
 
 /* adactacion a dispositivos */
@@ -255,5 +261,3 @@ textarea {
   box-shadow: -2px 0 4px rgba(0, 0, 0, 0.1);
   z-index: 999;
 }
-
-

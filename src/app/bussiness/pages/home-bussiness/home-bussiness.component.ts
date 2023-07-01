@@ -51,7 +51,7 @@ export class HomeBussinessComponent implements OnInit{
   User:BussinessComponent;
   dataSource=new MatTableDataSource();
   dataSourceReview=new MatTableDataSource();
-  displayedColumns:string[]=['id','name','description','location','country','price','imagenurl','actions','reviews'];
+  displayedColumns:string[]=['name','description','location','country','price','imagenurl','actions','reviews'];
   displayedColumnsReview:string[]=['FirstName','LastName','PlaceName','imagenurl','Reviews'];
 
 
@@ -63,6 +63,7 @@ export class HomeBussinessComponent implements OnInit{
     this.PlaceRow=element;
     this.HttpDataServices.DeletePlace(element.id).subscribe();
     this.getAllPlacesbyBussiness(this.UserId);
+    location.reload();
   }
 
   OpenReviewsDialog(element:any){
@@ -80,7 +81,10 @@ export class HomeBussinessComponent implements OnInit{
     if (this.placeForm.valid) {
       const placeData = this.placeForm.value;
       this.BussinessService.PostPlaces(this.UserId, placeData).subscribe((response: any) => {
+
+        console.log(response);
       });
+      location.reload();
     }
   }
   openEditDialog(element:any){
@@ -116,7 +120,9 @@ export class HomeBussinessComponent implements OnInit{
 
 
   delete(id:any){
-    this.HttpDataServices.DeletePlace(id).subscribe();
+    this.HttpDataServices.DeletePlace(id).subscribe((response: any) =>{
+      console.log(response);
+    });
   }
 
 }

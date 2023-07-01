@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="background-color:rgba(242, 212, 121, 1)">
 
   <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
     <mat-icon *ngIf="!sidenav.opened">
@@ -8,8 +8,6 @@
       close
     </mat-icon>
   </button>
-
-
   <span class="example-spacer"></span>
   <span>TourMates</span>
   <span class="example-spacer"></span>
@@ -62,8 +60,11 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <div *ngIf= "profile === false">
-      <div class="content">
-        <router-outlet></router-outlet>
+
+      <div class="container">
+        <div class="content">
+          <router-outlet></router-outlet>
+        </div>
       </div>
     </div>
     <div *ngIf= "profile">

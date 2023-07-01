@@ -22,10 +22,12 @@ export class HomeTravellerComponent implements OnInit {
   presses: boolean = false;
   counter: number = 1;
   UserId: number = 0;
+  friendshiOther: Friendship;
   Notf: any = NotificationTravellerDialogComponent;
   answer: string = "";
   constructor(private userService: TravellerService, private dialog: MatDialog) {
     this.friendship = {} as Friendship;
+    this.friendshiOther = {} as Friendship;
   }
 
   ngOnInit() {
@@ -57,12 +59,14 @@ export class HomeTravellerComponent implements OnInit {
     this.userService.GetTravellerById(id).subscribe(
       (data: any) => {
         this.friendship.friend = data;
+        this.friendshiOther.user_id = data;
         console.log(data);
       }
     );
     this.userService.GetTravellerById(this.UserId).subscribe(
       (data: any) => {
         this.friendship.user_id = data;
+        this.friendshiOther.friend = data;
         console.log(data);
       });
     this.userService.AddMatch(this.UserId, this.friendship).subscribe(
@@ -74,6 +78,13 @@ export class HomeTravellerComponent implements OnInit {
       },
       error => {
         console.error('Error al añadir el match:', error);
+      }
+    );
+    this.userService.AddMatch(id, this.friendshiOther).subscribe(
+      (response: any) =>{
+        console.log(response);
+        console.log('Match añadido con éxito');
+        // Aquí puedes agregar lógica adicional, como actualizar la lista de matches
       }
     );
     this.sendNotification(this.friendship.friend.id);

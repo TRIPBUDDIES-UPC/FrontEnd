@@ -10,9 +10,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: rgba(242, 213, 121, 0.7);
   border-radius: 8px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+.favorite-button mat-icon {
+  color: #e91e63 !important;
+}
+
+.message-button mat-icon {
+  color: white !important;
 }
 
 .traveller-profile {
@@ -23,7 +30,7 @@
   justify-content: center;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  background-color: #f2f2f2;
+  background-color: rgba(242, 181, 107, 0.8);
 }
 
 .traveller-profile img {
@@ -35,6 +42,7 @@
 .mat-card-content {
   padding: 16px;
   text-align: center;
+  color: black; /* Agrega color de texto */
 }
 
 .mat-card-actions {
@@ -59,5 +67,20 @@ button.active {
 }
 
 button mat-icon {
-  color: #e91e63;
+  color: rgba(89, 25, 11, 0.7); /* Cambia el color del icono */
+}
+
+/* Estilos para los botones */
+button.mat-icon-button {
+  background-color: rgba(242, 226, 196, 0.8); /* Color del botón */
+  border-radius: 50%; /* Hace que el botón sea redondo */
+  padding: 10px; /* Espacio interno del botón */
+}
+
+button.mat-raised-button {
+  background-color: rgba(191, 113, 84, 0.8); /* Color del botón */
+  color: white; /* Color del texto */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espacio interno del botón */
+  margin: 5px; /* Espacio entre botones */
 }

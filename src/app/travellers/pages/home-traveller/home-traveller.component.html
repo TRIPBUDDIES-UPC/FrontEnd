@@ -8,12 +8,12 @@
       <p>{{ traveller.description }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-icon-button color="primary" (click)="addMatch(traveller.id)">
+      <button mat-icon-button class="favorite-button" (click)="addMatch(traveller.id)">
         <mat-icon>favorite</mat-icon>
       </button>
-      <button mat-raised-button color="primary" (click)="openMessageDialog(traveller.id)">Send message <mat-icon>sms</mat-icon></button>
+      <button mat-raised-button color="primary" class="message-button" (click)="openMessageDialog(traveller.id)">
+        Send message <mat-icon>sms</mat-icon>
+      </button>
     </mat-card-actions>
   </mat-card>
 </div>
-
-

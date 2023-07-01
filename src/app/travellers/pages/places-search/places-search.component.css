@@ -5,12 +5,40 @@
   padding: 20px;
   background-image: url("https://th.bing.com/th/id/R.d810260d3b3c97094079a3c0f67d7d0d?rik=aJoHfFjfGHWC5g&riu=http%3a%2f%2fsalirdelpais.com%2fwp-content%2fuploads%2f2017%2f09%2fCuatro-curiosidades-que-te-sorprender%c3%a1n-sobre-viajar-en-avi%c3%b3n-salir-del-pais.jpg&ehk=d9ffYExxB5shYr7EZDTk3bearqXiAjRjBRL5cLx8Dts%3d&risl=&pid=ImgRaw&r=0");
   background-size: cover;
+  background-color: rgba(242, 181, 107, 0.3);
+  background-blend-mode: overlay;
 }
+.containerReview{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 300px;
+  height: auto;
+  background-color: rgba(242, 181, 107, 1.4)
+;
+}
+.larger-input {
+  width: 100%; /* Ancho del 100% para que ocupe todo el espacio disponible */
+  height: 200px; /* Ajusta la altura según tus preferencias */
+}
+.table-container {
+  height: 50em;
+  overflow-y: auto;
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+
 
 .option {
   margin-bottom: 20px;
-}
 
+}
+.colorButton{
+  background-color: #Bf7154;
+}
 .results {
   margin-top: 20px;
   width: 100%;
@@ -125,7 +153,7 @@ th {
 }
 
 .add-review-button button {
-  background-color: #007bff;
+  background-color: #Bf7154;
   color: #fff;
   padding: 8px 16px;
   border-radius: 4px;
@@ -135,7 +163,7 @@ th {
 }
 
 .add-review-button button:hover {
-  background-color: #0069d9;
+  background-color: #Bf7154;
 }
 
 .add-review-button button:focus {
@@ -144,6 +172,16 @@ th {
 }
 
 .add-review-button button:active {
-  background-color: #0056b3;
+  background-color: #Bf7154;
 }
 
+.edit{
+  background-color: #Bf7154;
+}
+
+.colorReview{
+  background-color: rgba(242, 181, 107, 0.5);
+}
+.results mat-table-responsive{
+  background-color: rgba(242, 181, 107, 0.5)
+}
