@@ -61,7 +61,7 @@
     </cdk-virtual-scroll-viewport>
     <div class="answer" >
       <mat-form-field appearance="fill" style="width: calc(100% - 40px);">
-        <textarea matInput (keydown.enter)="SendMessage(contactId)" [(ngModel)]='answer'></textarea>
+        <textarea matInput (keydown.enter)="SendMessage(contactId)" [(ngModel)]='answer' style="color: antiquewhite"></textarea>
       </mat-form-field>
       <button mat-icon-button (click)="SendMessage(contactId)">
         <mat-icon>send</mat-icon>

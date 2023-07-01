@@ -1,0 +1,9 @@
+.container {
+  background-image: url("/../../../../assets/images/3d7d4e06-13d6-4801-ad66-c4b44d961691.jpg");
+  background-color: rgba(242, 181, 107, 0.3);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+

@@ -20,6 +20,7 @@
 
 .message-button mat-icon {
   color: white !important;
+  background: #Bf7154;
 }
 
 .traveller-profile {

@@ -26,7 +26,7 @@ export class FavoritesTravellerComponent implements OnInit {
   Placesdata: Places;
   Travellerdata: Traveller;
   Favoritedata: Favorite;
-  displayedColumns: string[] = ['id', 'name', 'description', 'location', 'country', 'price', 'imagenurl', 'favorite'];
+  displayedColumns: string[] = ['name', 'description', 'location', 'country', 'price', 'imagenurl', 'favorite'];
 
   constructor(private router: Router, private favoriteService: TravellerService, private travellerService: TravellerService) {
     this.Placesdata = {} as Places;
@@ -59,7 +59,9 @@ export class FavoritesTravellerComponent implements OnInit {
   }
 
   deleteFavorite(id: any) {
-    this.favoriteService.DeleteFavorite(id).subscribe();
+    this.favoriteService.DeleteFavorite(id).subscribe((response: any) => {
+      console.log(response)
+    })
   }
 
   deleteButton(element: any) {
