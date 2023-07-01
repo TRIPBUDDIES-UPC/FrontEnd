@@ -108,19 +108,22 @@ export class PlacesSearchComponent implements OnInit {
   addToFavorites(id: number) {
     this.placeService.GetPlacesById(id).subscribe(
       (response: any) => {
-        this.favorite.places_Id = response;
-        console.log(this.favorite.places_Id.id);
-        console.log(response);
+        this.favorite.places = response;
+        //console.log(this.favorite.places.id);
+        //console.log(response);
       }
     );
     this.placeService.GetTravellerById(this.UserId).subscribe(
       (response: any) => {
-        this.favorite.traveller_Id = response;
-        console.log(response);
-        console.log(this.favorite.traveller_Id.id);
-        console.log(this.favorite)
+        this.favorite.traveller = response;
+         console.log(response);
+        // console.log(this.favorite.traveller.id);
+         console.log(this.favorite);
       }
     );
+    this.favorite.id = this.UserId2;
+    console.log(this.UserId2);
+    console.log(this.favorite);
     this.placeService.AddFavorite(this.UserId2,this.favorite).subscribe(
       (response:any)=> {
         this.favorite = response
