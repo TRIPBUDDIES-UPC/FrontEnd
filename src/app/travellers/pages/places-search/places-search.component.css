@@ -181,6 +181,7 @@ th {
 
 .colorReview{
   background-color: rgba(242, 181, 107, 0.5);
+  padding: 40px;
 }
 .results mat-table-responsive{
   background-color: rgba(242, 181, 107, 0.5)

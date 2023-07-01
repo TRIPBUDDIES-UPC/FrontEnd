@@ -116,14 +116,15 @@ export class PlacesSearchComponent implements OnInit {
     this.placeService.GetTravellerById(this.UserId).subscribe(
       (response: any) => {
         this.favorite.traveller = response;
+        this.favorite.id = response.id;
          console.log(response);
         // console.log(this.favorite.traveller.id);
-         console.log(this.favorite);
+         //console.log(this.favorite);
       }
     );
-    this.favorite.id = this.UserId2;
-    console.log(this.UserId2);
-    console.log(this.favorite);
+
+    //console.log(this.UserId2);
+    //console.log(this.favorite);
     this.placeService.AddFavorite(this.UserId2,this.favorite).subscribe(
       (response:any)=> {
         this.favorite = response
